@@ -6,7 +6,7 @@ import BlobImage from '../components/BlobImage.astro';
 import ClientLogos from '../components/ClientLogos.astro';
 import ConcentricCircles from '../components/ConcentricCircles.astro';
 import CtaBand from '../components/CtaBand.astro';
-import Icon from '../components/Icon.astro';
+import Icon, { type IconName } from '../components/Icon.astro';
 import IsoBadges from '../components/IsoBadges.astro';
 import OvalTrail from '../components/OvalTrail.astro';
 import ProjectCard from '../components/ProjectCard.astro';
@@ -20,6 +20,12 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
 const featured = (await getCollection('projects', (p) => p.data.featured))
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, 3);
+
+const heroPoints: { icon: IconName; label: string }[] = [
+  { icon: 'train', label: 'Rail & civil expertise' },
+  { icon: 'australia', label: 'Remote WA capability' },
+  { icon: 'cog', label: 'Integrated project delivery' },
+];
 ---
 
 <BaseLayout
@@ -49,25 +55,38 @@ const featured = (await getCollection('projects', (p) => p.data.featured))
 
     <div class="container-site pt-10 pb-44 sm:pt-20 sm:pb-72 lg:pt-28 lg:pb-80">
       <div class="max-w-3xl">
+        <p class="mb-4 text-xs font-semibold tracking-[0.3em] text-gold uppercase sm:mb-5 sm:text-sm">
+          Contracting &amp; Rail Services
+        </p>
         <SplitHeading
           as="h1"
           tone="white"
           size="xl"
           light="Keeping your resources"
-          bold="on track"
+          bold="on track."
         />
         <p class="mt-5 max-w-2xl text-base leading-relaxed text-white/90 sm:mt-6 sm:text-lg lg:text-xl">
-          Delivering rail, civil, electrical, mechanical, modular and contracting services across
-          Perth, the Pilbara and remote Western Australia.
+          Rail, civil, electrical, mechanical and modular contracting across Perth, the Pilbara and
+          remote Western Australia.
         </p>
         <div class="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap sm:gap-4">
           <a href="/services/" class="btn-gold">
             Explore our services <Icon name="arrow" class="size-4" />
           </a>
           <a href="/contact/" class="btn-outline-light">
-            Contact us
+            Talk to our team
           </a>
         </div>
+        <ul
+          class="mt-10 grid gap-4 text-sm text-white/90 sm:mt-14 sm:flex sm:flex-wrap sm:items-center sm:gap-0 sm:divide-x sm:divide-white/40"
+        >
+          {heroPoints.map(({ icon, label }) => (
+            <li class="flex items-center gap-3 sm:px-7 sm:first:pl-0 sm:last:pr-0">
+              <Icon name={icon} class="size-7 text-gold" />
+              {label}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   </section>

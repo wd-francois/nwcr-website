@@ -7,7 +7,7 @@
  * never overflow on a 360 px screen.
  */
 interface Props {
-  light: string;
+  light?: string;
   bold: string;
   as?: 'h1' | 'h2' | 'h3';
   tone?: 'navy' | 'white';
@@ -17,7 +17,7 @@ interface Props {
 }
 
 const {
-  light,
+  light = '',
   bold,
   as: Tag = 'h2',
   tone = 'navy',
@@ -46,7 +46,7 @@ const style = `--sh-0:${fit(0)}rem;--sh-1:${fit(1)}rem;--sh-2:${fit(2)}rem`;
     className,
   ]}
 >
-  <span class="block font-light">{light}</span>{' '}
+  {light && <span class="block font-light">{light}</span>}{light && ' '}
   <span class="block font-extrabold uppercase">{bold}</span>
 </Tag>
 
