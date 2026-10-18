@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import PageHero from '../../components/PageHero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import IsoBadges from '../../components/IsoBadges.astro';
+import { site } from '../../config/site';
+import heroImage from '../../assets/placeholders/landscape-gorge-reflection.jpg';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Services"
+  description="Rail, civil and construction, electrical, mechanical and engineering, modular infrastructure, contracting, vegetation management, and labour and equipment hire across WA."
+>
+  <PageHero
+    light="Capabilities"
+    bold="Overview"
+    intro={`Across Perth and the Pilbara, NWCR delivers a broad range of services for mining, rail, government and industrial clients. ${site.serviceArea}`}
+    image={heroImage}
+    imageAlt="Green trees and red rock cliffs reflected in a still Pilbara waterhole"
+    breadcrumbs={[{ label: 'Services' }]}
+  />
+
+  <section aria-labelledby="services-list-heading" class="on-light py-20 sm:py-24">
+    <div class="container-site">
+      <h2 id="services-list-heading" class="sr-only">
+        All services
+      </h2>
+      <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map((s) => (
+          <li>
+            <ServiceCard service={s} />
+          </li>
+        ))}
+      </ul>
+
+      <div class="mt-20 grid gap-8 rounded-4xl bg-sand p-8 sm:p-12 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div>
+          <h2 class="text-2xl font-extrabold">Licensed, registered and certified</h2>
+          <p class="mt-3 max-w-2xl leading-relaxed text-muted">
+            Electrical licence {site.electricalLicence} · Pest management business registration #
+            {site.pestManagementRegistration} · Certified to ISO 9001, ISO 14001 and ISO 45001.
+          </p>
+        </div>
+        <IsoBadges />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

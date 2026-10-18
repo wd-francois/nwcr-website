@@ -1,0 +1,39 @@
+---
+/** Closing call to action: "NWCR is ready. Will you join us as a pillar for change?" */
+import { site } from '../config/site';
+import ConcentricCircles from './ConcentricCircles.astro';
+import Icon from './Icon.astro';
+import OvalTrail from './OvalTrail.astro';
+
+const [first, second] = site.closingCta.split('. ');
+---
+
+<section aria-labelledby="cta-heading" class="relative isolate overflow-hidden bg-night text-white">
+  <div
+    aria-hidden="true"
+    class="absolute inset-x-0 bottom-0 -z-10 h-40 bg-linear-to-t from-ochre/70 via-burnt-orange/20 to-transparent"
+  ></div>
+  <ConcentricCircles class="pointer-events-none absolute -top-20 -left-24 -z-10 size-104 text-white/7" />
+  <div class="container-site relative py-20 text-center sm:py-24">
+    <OvalTrail tone="white" count={11} class="mx-auto mb-10 w-64 opacity-70" />
+    <h2
+      id="cta-heading"
+      class="mx-auto max-w-4xl text-3xl leading-tight font-extrabold text-white uppercase sm:text-5xl"
+    >
+      {first}. <span class="mt-2 block font-light normal-case">{second}</span>
+    </h2>
+    <p class="mx-auto mt-6 max-w-xl text-lg text-white/90">
+      Talk to our team about your next rail, civil, electrical, mechanical or modular project.
+    </p>
+    <div class="mt-10 mb-10 flex flex-col justify-center gap-4 sm:flex-row">
+      <a href="/contact/" class="btn-gold">
+        Contact our team <Icon name="arrow" class="size-4" />
+      </a>
+      {site.capabilityStatement.enabled && (
+        <a href={site.capabilityStatement.href} class="btn-outline-light">
+          <Icon name="document" class="size-4" /> View Capability Statement
+        </a>
+      )}
+    </div>
+  </div>
+</section>

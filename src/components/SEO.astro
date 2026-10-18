@@ -1,0 +1,80 @@
+---
+/** Per-page SEO: title, description, canonical, Open Graph, Twitter and JSON-LD. */
+import { getImage } from 'astro:assets';
+import { site, siteUrl, activeSocialLinks } from '../config/site';
+import logo from '../assets/brand/logo.png';
+import type { OgImage } from '../types';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Share image (root-relative or absolute src). Defaults to the 1200×630 brand image. */
+  ogImage?: OgImage;
+  ogImageAlt?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogImage = { src: '/og-image.png', width: 1200, height: 630 },
+  ogImageAlt = `${site.name} — ${site.tagline}`,
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const base = Astro.site ?? new URL(siteUrl);
+const canonical = new URL(Astro.url.pathname, base).href;
+const ogImageUrl = new URL(ogImage.src, base).href;
+const logoImage = await getImage({ src: logo, width: 600, format: 'png' });
+const logoUrl = new URL(logoImage.src, base).href;
+
+const orgId = `${base.origin}/#organization`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': orgId,
+      name: site.name,
+      alternateName: site.shortName,
+      url: `${base.origin}/`,
+      logo: logoUrl,
+      image: ogImageUrl,
+      description: site.description,
+      slogan: site.tagline,
+      foundingDate: String(site.founded),
+      taxID: `ABN ${site.abn}`,
+      telephone: site.phone.e164,
+      email: site.email,
+      areaServed: { '@type': 'State', name: 'Western Australia' },
+      ...(activeSocialLinks.length ? { sameAs: activeSocialLinks.map((s) => s.url) } : {}),
+    },
+  ],
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+{noindex && <meta name="robots" content="noindex, follow" />}
+
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={site.name} />
+<meta property="og:locale" content="en_AU" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImageUrl} />
+<meta property="og:image:width" content={String(ogImage.width)} />
+<meta property="og:image:height" content={String(ogImage.height)} />
+<meta property="og:image:alt" content={ogImageAlt} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+<meta name="twitter:image:alt" content={ogImageAlt} />
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />

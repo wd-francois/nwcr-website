@@ -1,0 +1,68 @@
+---
+/**
+ * Decorative trail of hand-drawn-style ovals, used to connect sections the way
+ * the capability statement does. Purely decorative (aria-hidden).
+ */
+interface Props {
+  tone?: 'white' | 'navy' | 'gold' | 'sand';
+  /** Number of ovals along the trail. */
+  count?: number;
+  /** Shape of the trail. */
+  path?: 'wave' | 'arc' | 'line';
+  class?: string;
+}
+
+const { tone = 'white', count = 12, path = 'wave', class: className } = Astro.props;
+
+const colour = {
+  white: 'text-white',
+  navy: 'text-navy/40',
+  gold: 'text-gold',
+  sand: 'text-sand-deep',
+}[tone];
+
+const W = 600;
+const H = 140;
+const ovals = Array.from({ length: count }, (_, i) => {
+  const t = count === 1 ? 0.5 : i / (count - 1);
+  const x = 20 + t * (W - 40);
+  const y =
+    path === 'wave'
+      ? H / 2 + Math.sin(t * Math.PI * 2) * (H / 2 - 24)
+      : path === 'arc'
+        ? H - 24 - Math.sin(t * Math.PI) * (H - 48)
+        : H / 2;
+  // Deterministic variation so each oval looks hand-drawn but renders identically every build.
+  const seed = Math.sin((i + 1) * 12.9898) * 43758.5453;
+  const r = seed - Math.floor(seed);
+  return {
+    cx: x.toFixed(1),
+    cy: y.toFixed(1),
+    rx: (9 + r * 7).toFixed(1),
+    ry: (6 + (1 - r) * 5).toFixed(1),
+    rot: Math.round(r * 160 - 80),
+  };
+});
+---
+
+<svg
+  aria-hidden="true"
+  focusable="false"
+  class:list={[colour, className]}
+  viewBox={`0 0 ${W} ${H}`}
+  fill="none"
+>
+  {ovals.map((o) => (
+    <ellipse
+      cx={o.cx}
+      cy={o.cy}
+      rx={o.rx}
+      ry={o.ry}
+      transform={`rotate(${o.rot} ${o.cx} ${o.cy})`}
+      stroke="currentColor"
+      stroke-width="3.5"
+      stroke-linecap="round"
+      vector-effect="non-scaling-stroke"
+    />
+  ))}
+</svg>

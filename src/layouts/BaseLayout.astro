@@ -1,0 +1,67 @@
+---
+import '../styles/global.css';
+import montserratLatin from '@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2?url';
+import SEO from '../components/SEO.astro';
+import type { OgImage } from '../types';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CulturalNotice from '../components/CulturalNotice.astro';
+
+interface Props {
+  /** Page title without the site suffix. Ignored when `fullTitle` is set. */
+  title: string;
+  description: string;
+  /** Use this exact <title> (e.g. the home page). */
+  fullTitle?: string;
+  ogImage?: OgImage;
+  noindex?: boolean;
+}
+
+const { title, description, fullTitle, ogImage, noindex } = Astro.props;
+const pageTitle = fullTitle ?? `${title} | Norwest Contracting & Rail`;
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b1e3f" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="preload"
+      href={montserratLatin}
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <SEO title={pageTitle} description={description} ogImage={ogImage} noindex={noindex} />
+    <script is:inline>
+      // Hide the cultural notice before first paint if it was dismissed on an earlier visit.
+      try {
+        if (localStorage.getItem('nwcr-cultural-notice') === 'dismissed') {
+          document.documentElement.classList.add('notice-dismissed');
+        }
+      } catch {
+        /* storage unavailable — show the notice */
+      }
+    </script>
+  </head>
+  <body class="flex min-h-dvh flex-col">
+    <a
+      href="#main-content"
+      class="on-light sr-only z-60 rounded-full bg-gold px-5 py-3 font-bold text-night focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+    >
+      Skip to main content
+    </a>
+    <CulturalNotice />
+    <Header />
+    <main id="main-content" tabindex="-1" class="flex-1 outline-none">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

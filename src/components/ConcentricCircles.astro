@@ -1,0 +1,23 @@
+---
+/** Soft concentric-circle outlines used as a low-opacity background accent. Decorative only. */
+interface Props {
+  rings?: number;
+  class?: string;
+}
+
+const { rings = 5, class: className } = Astro.props;
+const radii = Array.from({ length: rings }, (_, i) => ((i + 1) * 96) / rings);
+---
+
+<svg aria-hidden="true" focusable="false" class:list={className} viewBox="0 0 200 200" fill="none">
+  {radii.map((r) => (
+    <circle
+      cx="100"
+      cy="100"
+      r={r}
+      stroke="currentColor"
+      stroke-width="3"
+      vector-effect="non-scaling-stroke"
+    />
+  ))}
+</svg>

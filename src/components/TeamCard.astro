@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import type { TeamMember } from '../data/team';
+import Icon from './Icon.astro';
+
+interface Props {
+  member: TeamMember;
+}
+
+const { member } = Astro.props;
+---
+
+<article class="flex flex-col items-center text-center">
+  <div class="relative">
+    <span
+      aria-hidden="true"
+      class="absolute -inset-2 rounded-full border-[3px] border-gold/70"
+    ></span>
+    <Image
+      src={member.photo}
+      alt={`${member.name}, ${member.role}`}
+      width={208}
+      densities={[1, 2]}
+      class="relative size-44 rounded-full object-cover shadow-lg shadow-night/15 sm:size-52"
+    />
+  </div>
+  <h3 class="mt-6 text-xl font-extrabold">{member.name}</h3>
+  <p class="mt-1 text-sm font-bold tracking-wide text-bush-green uppercase">{member.role}</p>
+  {(member.phone || member.email) && (
+    <ul class="mt-3 space-y-1 text-[0.95rem]">
+      {member.phone && (
+        <li>
+          <a
+            href={`tel:${member.phone.e164}`}
+            class="inline-flex items-center gap-2 font-semibold text-navy hover:underline"
+          >
+            <Icon name="phone" class="size-4 text-ochre" />
+            {member.phone.display}
+          </a>
+        </li>
+      )}
+      {member.email && (
+        <li>
+          <a
+            href={`mailto:${member.email}`}
+            class="inline-flex items-center gap-2 font-semibold break-all text-navy hover:underline"
+          >
+            <Icon name="mail" class="size-4 text-ochre" />
+            {member.email}
+          </a>
+        </li>
+      )}
+    </ul>
+  )}
+</article>

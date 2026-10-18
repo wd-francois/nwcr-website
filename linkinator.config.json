@@ -1,0 +1,5 @@
+{
+  "recurse": true,
+  "skip": ["^https://norwestcontractingandrail[.]com[.]au", "^mailto:", "^tel:"],
+  "verbosity": "error"
+}

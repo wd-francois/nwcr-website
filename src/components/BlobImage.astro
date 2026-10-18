@@ -1,0 +1,62 @@
+---
+/**
+ * A photo inside a soft, organic rounded "blob" shape (4 variants), like the
+ * image masks in the capability statement. Outputs AVIF/WebP via <Picture>.
+ */
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  src: ImageMetadata;
+  /** Describe the photo. Pass "" only for purely decorative images. */
+  alt: string;
+  variant?: 1 | 2 | 3 | 4;
+  /** CSS sizes attribute, e.g. "(min-width: 1024px) 40vw, 100vw". */
+  sizes: string;
+  widths?: number[];
+  /** Tailwind aspect class for the frame, e.g. "aspect-4/3". */
+  aspect?: string;
+  /** Adds a white outline ring offset around the shape. */
+  ring?: boolean;
+  priority?: boolean;
+  class?: string;
+}
+
+const {
+  src,
+  alt,
+  variant = 1,
+  sizes,
+  widths = [400, 640, 960, 1280],
+  aspect = 'aspect-4/3',
+  ring = false,
+  priority = false,
+  class: className,
+} = Astro.props;
+
+const usableWidths = widths.filter((w) => w <= src.width);
+if (usableWidths.length === 0) usableWidths.push(src.width);
+const ringVariant = (variant % 4) + 1;
+---
+
+<div class:list={['relative', aspect, className]}>
+  {ring && (
+    <span
+      aria-hidden="true"
+      class="pointer-events-none absolute -inset-2.5 border-[3px] border-white/90 sm:-inset-3.5"
+      style={`border-radius: var(--radius-blob-${ringVariant})`}
+    />
+  )}
+  <Picture
+    src={src}
+    alt={alt}
+    formats={['avif', 'webp']}
+    widths={usableWidths}
+    sizes={sizes}
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    pictureAttributes={{ class: 'block h-full w-full' }}
+    class="h-full w-full object-cover shadow-xl shadow-night/10"
+    style={`border-radius: var(--radius-blob-${variant})`}
+  />
+</div>

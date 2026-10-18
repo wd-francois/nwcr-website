@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Icon from '../components/Icon.astro';
+import PageHero from '../components/PageHero.astro';
+import SplitHeading from '../components/SplitHeading.astro';
+import TeamCard from '../components/TeamCard.astro';
+import { leadership } from '../data/team';
+import { mailto, site } from '../config/site';
+---
+
+<BaseLayout
+  title="Contact Us"
+  description={`Contact Norwest Contracting & Rail. Call ${site.phone.display} or email ${site.email} about your next project.`}
+>
+  <PageHero
+    light="Contact"
+    bold="Our team"
+    intro="Tell us about your project and our team will be in touch. We work across Perth, the Pilbara and remote projects throughout Western Australia."
+    breadcrumbs={[{ label: 'Contact' }]}
+  />
+
+  <section aria-labelledby="enquiry-heading" class="on-light py-16 sm:py-24">
+    <div class="container-site grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-7">
+        <h2 id="enquiry-heading" class="text-2xl font-extrabold sm:text-3xl">
+          Send an enquiry
+        </h2>
+        <div class="mt-8">
+          <ContactForm />
+        </div>
+      </div>
+
+      <aside class="lg:col-span-5" aria-labelledby="details-heading">
+        <div class="rounded-4xl bg-night p-8 text-white sm:p-10">
+          <h2 id="details-heading" class="text-2xl font-extrabold text-white">
+            Contact details
+          </h2>
+          <ul class="mt-8 space-y-5 text-lg">
+            <li>
+              <a
+                href={`tel:${site.phone.e164}`}
+                class="flex items-center gap-3 font-semibold text-white hover:underline"
+              >
+                <span class="grid size-11 place-items-center rounded-full bg-white/10">
+                  <Icon name="phone" class="size-5 text-gold" />
+                </span>
+                {site.phone.display}
+              </a>
+            </li>
+            <li>
+              <a
+                href={mailto('Website enquiry')}
+                class="flex items-center gap-3 font-semibold break-all text-white hover:underline"
+              >
+                <span class="grid size-11 shrink-0 place-items-center rounded-full bg-white/10">
+                  <Icon name="mail" class="size-5 text-gold" />
+                </span>
+                {site.email}
+              </a>
+            </li>
+          </ul>
+
+          <p class="mt-8 text-white/85">{site.serviceArea}</p>
+
+          <p class="mt-8 border-t border-white/15 pt-6 text-sm text-white/85">ABN {site.abn}</p>
+        </div>
+
+        {site.capabilityStatement.enabled && (
+          <div class="mt-6 rounded-4xl bg-sand p-8">
+            <h3 class="text-lg font-extrabold">Capability Statement</h3>
+            <p class="mt-2 leading-relaxed text-muted">
+              Our services, projects, values and certifications in one place — and you can print it
+              or save it as a PDF.
+            </p>
+            <a href={site.capabilityStatement.href} class="btn-navy mt-5">
+              <Icon name="document" class="size-4" /> View Capability Statement
+            </a>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+
+  <section aria-labelledby="team-heading" class="on-light bg-sand py-20 sm:py-24">
+    <div class="container-site">
+      <div class="text-center">
+        <SplitHeading id="team-heading" light="Meet" bold="Our team" />
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed">
+          Our team often works in remote areas of the Pilbara, so email is the best way to reach us.
+          We will get back to you as soon as possible.
+        </p>
+      </div>
+
+      <ul class="mt-14 flex flex-wrap justify-center gap-x-16 gap-y-14">
+        {leadership.map((m) => (
+          <li class="w-full sm:w-64">
+            <TeamCard member={m} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

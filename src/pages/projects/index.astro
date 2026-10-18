@@ -1,0 +1,121 @@
+---
+import { getCollection } from 'astro:content';
+import { sectors } from '../../content.config';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import PageHero from '../../components/PageHero.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import heroImage from '../../assets/placeholders/project-pedestrian-walkway.jpg';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const usedSectors = sectors.filter((s) => projects.some((p) => p.data.sectors.includes(s)));
+---
+
+<BaseLayout
+  title="Projects"
+  description="Selected NWCR projects for Rio Tinto, Chevron, Wiley Construction, Clough / Saipem and others — rail, civil, modular and fabrication work across Western Australia."
+>
+  <PageHero
+    light="Our"
+    bold="Projects"
+    intro="Rail, civil, modular and fabrication projects delivered safely and to a high standard for our clients across Western Australia."
+    image={heroImage}
+    imageAlt="A new concrete pedestrian walkway crossing ballast at a rail yard"
+    blob={3}
+    breadcrumbs={[{ label: 'Projects' }]}
+  />
+
+  <section aria-labelledby="project-list-heading" class="on-light py-16 sm:py-24">
+    <div class="container-site">
+      <h2 id="project-list-heading" class="sr-only">
+        Project list
+      </h2>
+
+      <!-- Filter chips: hidden until the script runs, so without JS every project simply shows. -->
+      <div data-filter hidden class="mb-12">
+        <p
+          id="filter-label"
+          class="mb-3 text-sm font-bold tracking-[0.14em] text-bush-green uppercase"
+        >
+          Filter by sector
+        </p>
+        <div role="group" aria-labelledby="filter-label" class="flex flex-wrap gap-3">
+          <button type="button" class="chip" aria-pressed="true" data-sector="all">
+            All projects
+          </button>
+          {usedSectors.map((s) => (
+            <button type="button" class="chip" aria-pressed="false" data-sector={s}>
+              {s}
+            </button>
+          ))}
+        </div>
+        <p class="sr-only" role="status" data-filter-status></p>
+      </div>
+
+      <ul class="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12" data-project-list>
+        {projects.map((p, i) => (
+          <li data-sectors={p.data.sectors.join(',')}>
+            <ProjectCard project={p} variant={((i % 4) + 1) as 1 | 2 | 3 | 4} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>
+
+<style>
+  .chip {
+    min-height: 2.75rem;
+    border-radius: 9999px;
+    border: 2px solid var(--color-navy);
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    background: #fff;
+    cursor: pointer;
+    transition:
+      background-color 0.15s,
+      color 0.15s;
+  }
+  .chip:hover {
+    background: var(--color-sand);
+  }
+  .chip[aria-pressed='true'] {
+    background: var(--color-navy);
+    color: #fff;
+  }
+</style>
+
+<script>
+  const filter = document.querySelector<HTMLElement>('[data-filter]');
+  const items = [...document.querySelectorAll<HTMLElement>('[data-project-list] > li')];
+  const status = document.querySelector<HTMLElement>('[data-filter-status]');
+
+  if (filter && items.length) {
+    filter.hidden = false;
+    const chips = [...filter.querySelectorAll<HTMLButtonElement>('[data-sector]')];
+
+    const apply = (sector: string) => {
+      let shown = 0;
+      for (const item of items) {
+        const match = sector === 'all' || (item.dataset.sectors ?? '').split(',').includes(sector);
+        item.hidden = !match;
+        if (match) shown++;
+      }
+      for (const chip of chips) {
+        chip.setAttribute('aria-pressed', String(chip.dataset.sector === sector));
+      }
+      if (status) {
+        const label = sector === 'all' ? 'all sectors' : sector;
+        status.textContent = `Showing ${shown} ${shown === 1 ? 'project' : 'projects'} for ${label}.`;
+      }
+    };
+
+    for (const chip of chips) {
+      chip.addEventListener('click', () => apply(chip.dataset.sector ?? 'all'));
+    }
+  }
+</script>

@@ -1,0 +1,20 @@
+---
+/** Permanent cultural advice line (About and Indigenous Tribute pages). */
+interface Props {
+  tone?: 'light' | 'dark';
+  class?: string;
+}
+
+const { tone = 'light', class: className } = Astro.props;
+---
+
+<p
+  class:list={[
+    'max-w-3xl border-l-4 py-1 pl-5 text-sm leading-relaxed sm:text-base',
+    tone === 'dark' ? 'border-gold text-white/90' : 'border-bush-green text-muted',
+    className,
+  ]}
+>
+  Aboriginal and Torres Strait Islander people are advised that this website may contain images,
+  voices and names of people who have passed away.
+</p>

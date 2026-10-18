@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ConcentricCircles from '../components/ConcentricCircles.astro';
+import Icon from '../components/Icon.astro';
+import OvalTrail from '../components/OvalTrail.astro';
+import SplitHeading from '../components/SplitHeading.astro';
+import TitleBanner from '../components/TitleBanner.astro';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Page not found"
+  description="The page you were looking for could not be found. Explore NWCR's services, projects and contact details."
+  noindex
+>
+  <section class="on-light relative overflow-hidden bg-sand">
+    <ConcentricCircles class="pointer-events-none absolute -right-32 -bottom-40 size-136 text-navy/7" />
+    <div class="container-site relative py-20 sm:py-28">
+      <p class="eyebrow text-bush-green">Error 404</p>
+      <TitleBanner class="mt-6" bleed>
+        <SplitHeading as="h1" light="Off the" bold="Tracks" tone="white" size="xl" />
+      </TitleBanner>
+      <p class="mt-8 max-w-xl text-lg leading-relaxed sm:text-xl">
+        Sorry, we couldn't find that page. It may have moved when we rebuilt our website.
+      </p>
+      <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+        <a href="/" class="btn-navy">
+          Go to the home page <Icon name="arrow" class="size-4" />
+        </a>
+        <a href="/contact/" class="btn-outline-navy">
+          Contact our team
+        </a>
+      </div>
+
+      <OvalTrail tone="navy" count={10} class="mt-16 w-56" />
+      <h2 class="mt-8 text-xl font-extrabold">Our services</h2>
+      <ul class="mt-5 flex flex-wrap gap-3">
+        {services.map((s) => (
+          <li>
+            <a
+              href={`/services/${s.id}/`}
+              class="inline-block rounded-full bg-white px-4 py-2 text-sm font-bold text-navy ring-1 ring-sand-deep hover:bg-navy hover:text-white"
+            >
+              {s.data.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

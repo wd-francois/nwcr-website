@@ -1,0 +1,167 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import { activeSocialLinks, mainNav, site } from '../config/site';
+import ArtworkBand from './ArtworkBand.astro';
+import ConcentricCircles from './ConcentricCircles.astro';
+import Icon from './Icon.astro';
+import accreditations from '../assets/accreditations/accreditations.png';
+import logoMark from '../assets/brand/logo-mark.png';
+import logoWordmarkWhite from '../assets/brand/logo-wordmark-white.png';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+const year = new Date().getFullYear();
+const [taglineStart, taglineEnd] = site.tagline.split(', ');
+---
+
+<footer class="relative overflow-hidden bg-night text-white">
+  <ArtworkBand />
+  <ConcentricCircles class="pointer-events-none absolute -top-24 -right-24 size-112 text-white/5" />
+
+  <div class="container-site relative grid gap-12 py-16 lg:grid-cols-12 lg:gap-8">
+    <div class="lg:col-span-4">
+      <a href="/" class="inline-flex items-center gap-3">
+        <span class="rounded-2xl bg-white p-2">
+          <Image src={logoMark} alt="" width={64} densities={[1, 2]} class="h-12 w-auto" />
+        </span>
+        <Image
+          src={logoWordmarkWhite}
+          alt={`${site.name} — home`}
+          width={130}
+          densities={[1, 2]}
+          class="h-10 w-auto"
+        />
+      </a>
+      <p class="mt-5 text-lg font-light">
+        {taglineStart}, <span class="font-extrabold uppercase">{taglineEnd}</span>
+      </p>
+
+      <section aria-labelledby="acknowledgement-heading" class="mt-8 border-l-4 border-gold pl-5">
+        <h2
+          id="acknowledgement-heading"
+          class="text-sm font-bold tracking-widest text-gold uppercase"
+        >
+          Acknowledgement of Country
+        </h2>
+        <p class="mt-2 text-sm leading-relaxed text-white/90">
+          {site.name} acknowledges the Ngarluma people and the Traditional Owners of the lands on
+          which we live and work across Western Australia. We pay our respects to Elders past and
+          present.
+        </p>
+      </section>
+    </div>
+
+    <nav aria-labelledby="footer-explore" class="lg:col-span-2">
+      <h2 id="footer-explore" class="footer-heading">
+        Explore
+      </h2>
+      <ul class="footer-list">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        {mainNav.map((item) => (
+          <li>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        ))}
+        {site.capabilityStatement.enabled && (
+          <li>
+            <a href={site.capabilityStatement.href}>Capability Statement</a>
+          </li>
+        )}
+      </ul>
+    </nav>
+
+    <nav aria-labelledby="footer-services" class="lg:col-span-3">
+      <h2 id="footer-services" class="footer-heading">
+        Services
+      </h2>
+      <ul class="footer-list">
+        {services.map((s) => (
+          <li>
+            <a href={`/services/${s.id}/`}>{s.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="lg:col-span-3">
+      <h2 class="footer-heading">Contact</h2>
+      <ul class="footer-list">
+        <li>
+          <a href={`tel:${site.phone.e164}`} class="inline-flex items-center gap-2">
+            <Icon name="phone" class="size-4 text-gold" />
+            {site.phone.display}
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:${site.email}`} class="inline-flex items-center gap-2">
+            <Icon name="mail" class="size-4 text-gold" />
+            {site.email}
+          </a>
+        </li>
+      </ul>
+      <p class="mt-6 text-sm text-white/80">{site.serviceArea}</p>
+    </div>
+  </div>
+
+  <div class="container-site relative border-t border-white/15 py-8">
+    <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+      <div>
+        <p class="text-sm font-bold tracking-wide text-gold uppercase">
+          100% Pilbara Indigenous owned business
+        </p>
+        <div class="mt-4 inline-block rounded-2xl bg-white p-3">
+          <Image
+            src={accreditations}
+            alt="ISO 45001, ISO 14001 and ISO 9001 certified; Supply Nation registered; ICN Gateway premium member; listed in the Aboriginal Business Directory WA"
+            width={560}
+            densities={[1, 2]}
+            class="h-auto w-full max-w-140"
+          />
+        </div>
+      </div>
+      {activeSocialLinks.length > 0 && (
+        <ul class="flex gap-4 text-sm font-semibold" aria-label="Social media">
+          {activeSocialLinks.map((s) => (
+            <li>
+              <a href={s.url} rel="me noopener" class="underline-offset-4 hover:underline">
+                {s.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+    <p class="mt-8 text-xs text-white/80">
+      &copy; {year}
+      {site.name}. ABN {site.abn}. Electrical licence {site.electricalLicence}. Pest management
+      business registration #{site.pestManagementRegistration}.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer-heading {
+    color: var(--color-gold);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .footer-list {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+  }
+  .footer-list a {
+    color: rgb(255 255 255 / 0.92);
+    text-underline-offset: 0.25em;
+  }
+  .footer-list a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+  }
+</style>

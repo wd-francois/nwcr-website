@@ -1,0 +1,164 @@
+@import '@fontsource-variable/montserrat';
+@import 'tailwindcss';
+
+/*
+ * Brand tokens — sampled from the NWCR logo and the 2026 capability statement.
+ * Usage: bg-navy, text-bush-green, from-night, border-gold, etc.
+ */
+@theme {
+  --font-sans:
+    'Montserrat Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial,
+    sans-serif;
+
+  --color-navy: #184594; /* logo blue — headings, banners */
+  --color-navy-dark: #12357a; /* hover state for navy */
+  --color-night: #0b1e3f; /* night-sky blue — hero and dark sections */
+  --color-night-soft: #132c5c;
+  --color-bush-green: #205d2f; /* logo green — accents */
+  --color-ochre: #c8341c; /* sunset ochre-red — primary buttons (white text 5.3:1) */
+  --color-ochre-dark: #a52a15;
+  --color-burnt-orange: #e8681e; /* decorative only — not for text */
+  --color-gold: #f6b42a; /* sunset gold — accents on dark, buttons with night text */
+  --color-sand: #f4f1ec; /* warm off-white surface */
+  --color-sand-deep: #e9e3d9;
+  --color-ink: #2a2a2a; /* body text */
+  --color-muted: #55504a; /* secondary text on light surfaces (≥ 7:1 on sand) */
+}
+
+/* Organic "blob" image masks (used by <BlobImage>). Plain :root variables so they are always emitted. */
+:root {
+  --radius-blob-1: 62% 38% 55% 45% / 48% 58% 42% 52%;
+  --radius-blob-2: 42% 58% 38% 62% / 57% 43% 57% 43%;
+  --radius-blob-3: 55% 45% 63% 37% / 39% 54% 46% 61%;
+  --radius-blob-4: 48% 52% 44% 56% / 62% 40% 60% 38%;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-navy;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* On light surfaces, gold has too little contrast — use navy + gold double ring. */
+  .on-light :focus-visible,
+  .on-light:focus-visible {
+    outline-color: var(--color-navy);
+    box-shadow: 0 0 0 6px rgb(246 180 42 / 0.6);
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-night);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-center text-sm font-bold tracking-wide no-underline transition-colors duration-200;
+}
+
+@utility link {
+  @apply font-semibold text-navy underline decoration-gold decoration-2 hover:decoration-navy;
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply text-sm font-bold tracking-[0.14em] uppercase;
+  }
+
+  .btn-primary {
+    @apply btn bg-ochre text-white hover:bg-ochre-dark;
+  }
+  .btn-gold {
+    @apply btn bg-gold text-night hover:bg-white;
+  }
+  .btn-navy {
+    @apply btn bg-navy text-white hover:bg-navy-dark;
+  }
+  .btn-outline-light {
+    @apply btn border-2 border-white/80 text-white hover:bg-white hover:text-night;
+  }
+  .btn-outline-navy {
+    @apply btn border-2 border-navy text-navy hover:bg-navy hover:text-white;
+  }
+
+  .tick-list {
+    @apply grid gap-x-8 gap-y-3;
+  }
+  .tick-list li {
+    @apply relative pl-8 leading-snug;
+  }
+  .tick-list li::before {
+    content: '';
+    @apply absolute top-[0.2em] left-0 size-4 rounded-full border-[3px] border-bush-green;
+  }
+
+  /* Long-form copy rendered from Markdown content collections. */
+  .prose-nwcr {
+    @apply max-w-none text-lg leading-relaxed;
+  }
+  .prose-nwcr > * + * {
+    @apply mt-5;
+  }
+  .prose-nwcr h2 {
+    @apply mt-10 text-2xl font-extrabold;
+  }
+  .prose-nwcr h3 {
+    @apply mt-8 text-xl font-bold;
+  }
+  .prose-nwcr ul {
+    @apply list-disc space-y-2 pl-6 marker:text-bush-green;
+  }
+  .prose-nwcr a {
+    @apply link;
+  }
+  .prose-nwcr strong {
+    @apply font-bold text-night;
+  }
+
+  .visually-hidden {
+    @apply sr-only;
+  }
+}

@@ -1,0 +1,67 @@
+---
+/**
+ * The capability statement's signature heading: a light first line and an
+ * extra-bold uppercase second line, e.g. "Our / PROJECTS".
+ *
+ * Font sizes shrink for long single words (e.g. "INFRASTRUCTURE") so headings
+ * never overflow on a 360 px screen.
+ */
+interface Props {
+  light: string;
+  bold: string;
+  as?: 'h1' | 'h2' | 'h3';
+  tone?: 'navy' | 'white';
+  size?: 'xl' | 'lg' | 'md';
+  id?: string;
+  class?: string;
+}
+
+const {
+  light,
+  bold,
+  as: Tag = 'h2',
+  tone = 'navy',
+  size = 'lg',
+  id,
+  class: className,
+} = Astro.props;
+
+// [mobile, ≥640px, ≥1024px] maximum sizes in rem
+const scale = { xl: [2.75, 4, 4.75], lg: [2.25, 3, 3.5], md: [1.875, 2.25, 2.5] }[size];
+// Approximate width of the available column at each breakpoint, in rem
+const available = [17, 30, 34];
+// Browsers can wrap after a hyphen, so "Indigenous-owned" counts as "Indigenous-".
+const longestWord = Math.max(...`${light} ${bold}`.split(/\s+|(?<=-)/).map((w) => w.length));
+const fit = (i: number) =>
+  Math.min(scale[i] ?? 2, (available[i] ?? 17) / (longestWord * 0.8)).toFixed(3);
+const style = `--sh-0:${fit(0)}rem;--sh-1:${fit(1)}rem;--sh-2:${fit(2)}rem`;
+---
+
+<Tag
+  id={id}
+  style={style}
+  class:list={[
+    'split-heading leading-[1.04] tracking-tight',
+    tone === 'white' ? 'text-white' : 'text-navy',
+    className,
+  ]}
+>
+  <span class="block font-light">{light}</span>{' '}
+  <span class="block font-extrabold uppercase">{bold}</span>
+</Tag>
+
+<style>
+  .split-heading {
+    font-size: var(--sh-0);
+  }
+  @media (min-width: 40rem) {
+    .split-heading {
+      font-size: var(--sh-1);
+    }
+  }
+  @media (min-width: 64rem) {
+    .split-heading {
+      font-size: var(--sh-2);
+    }
+  }
+</style>

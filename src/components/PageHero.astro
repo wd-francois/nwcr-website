@@ -1,0 +1,64 @@
+---
+/**
+ * Inner-page hero: navy brush banner holding the page's <h1>, an intro and an
+ * optional blob-masked photo — modelled on the capability statement pages.
+ */
+import type { ImageMetadata } from 'astro';
+import BlobImage from './BlobImage.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import ConcentricCircles from './ConcentricCircles.astro';
+import OvalTrail from './OvalTrail.astro';
+import SplitHeading from './SplitHeading.astro';
+import TitleBanner from './TitleBanner.astro';
+
+interface Props {
+  light: string;
+  bold: string;
+  intro?: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  breadcrumbs: { label: string; href?: string }[];
+  blob?: 1 | 2 | 3 | 4;
+}
+
+const { light, bold, intro, image, imageAlt = '', breadcrumbs, blob = 2 } = Astro.props;
+---
+
+<section class="on-light relative overflow-hidden bg-sand">
+  <ConcentricCircles class="pointer-events-none absolute -bottom-40 -left-32 size-120 text-navy/6" />
+  <div
+    class:list={[
+      'container-site relative grid items-center gap-10 py-10 sm:py-14 lg:gap-14 lg:py-20',
+      image && 'lg:grid-cols-[1.15fr_0.85fr]',
+    ]}
+  >
+    <div class="min-w-0">
+      <Breadcrumbs items={breadcrumbs} class="mb-8" />
+      <TitleBanner bleed>
+        <SplitHeading as="h1" light={light} bold={bold} tone="white" size="xl" />
+      </TitleBanner>
+      {intro && <p class="mt-8 max-w-2xl text-lg leading-relaxed sm:text-xl">{intro}</p>}
+      <slot />
+    </div>
+    {image && (
+      <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+        <OvalTrail
+          tone="navy"
+          path="arc"
+          count={9}
+          class="pointer-events-none absolute -top-10 -left-16 hidden w-64 lg:block"
+        />
+        <BlobImage
+          src={image}
+          alt={imageAlt}
+          variant={blob}
+          ring
+          priority
+          sizes="(min-width: 1280px) 520px, (min-width: 1024px) 40vw, (min-width: 448px) 448px, 100vw"
+          widths={[400, 640, 960, 1120]}
+          aspect="aspect-5/4"
+        />
+      </div>
+    )}
+  </div>
+</section>

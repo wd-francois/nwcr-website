@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import { clients } from '../data/clients';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<ul
+  class:list={[
+    'grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5 xl:grid-cols-9',
+    className,
+  ]}
+>
+  {clients.map(({ name, logo, large }) => (
+    <li class="flex h-24 items-center justify-center rounded-2xl bg-white px-4 py-2 shadow-sm ring-1 ring-sand-deep">
+      <Image
+        src={logo}
+        alt={name}
+        height={Math.min(160, logo.height)}
+        class:list={['h-auto w-auto max-w-full object-contain', large ? 'max-h-20' : 'max-h-14']}
+      />
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,4912 @@
+[
+  {
+    "n": 1,
+    "w": 595.28,
+    "h": 841.89,
+    "spread": false,
+    "minFs": 21,
+    "units": [
+      {
+        "tag": "h1",
+        "cls": "title",
+        "lines": [
+          {
+            "x": 4.762,
+            "y": 79.179,
+            "fs": 7.392,
+            "pw": 37.482,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "Capability",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0042
+          },
+          {
+            "x": 4.762,
+            "y": 88.049,
+            "fs": 7.392,
+            "pw": 45.391,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "STATEMENT",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0157
+          }
+        ],
+        "hidden": true
+      },
+      {
+        "tag": "p",
+        "cls": "lead",
+        "lines": [
+          {
+            "x": 4.762,
+            "y": 97.725,
+            "fs": 3.528,
+            "pw": 82.49,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "100% Pilbara TLO Indigenous owned business",
+                "w": 500
+              },
+              {
+                "t": ".",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0014
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "n": 2,
+    "w": 1190.55,
+    "h": 841.89,
+    "spread": true,
+    "minFs": 12,
+    "units": [
+      {
+        "tag": "h2",
+        "cls": "title",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 5.682,
+            "fs": 3.696,
+            "pw": 18.741,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "Capability",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0041
+          },
+          {
+            "x": 2.381,
+            "y": 10.117,
+            "fs": 3.696,
+            "pw": 22.696,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "STATEMENT",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0158
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 15.84,
+            "fs": 2.016,
+            "pw": 14.23,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "WHO WE ARE",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0299
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 18.547,
+            "fs": 1.008,
+            "pw": 43.526,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "NWCR",
+                "w": 700
+              },
+              {
+                "t": " is a 100% Ngarluma TO owned business committed to delivering safe, efficient",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 20.059,
+            "fs": 1.008,
+            "pw": 41.757,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "and cost-effective contracting services while supporting the local communities in",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0008
+          },
+          {
+            "x": 2.381,
+            "y": 21.571,
+            "fs": 1.008,
+            "pw": 9.376,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "which we operate.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0022
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 23.797,
+            "fs": 1.008,
+            "pw": 40.853,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "We have been in operation for over a decade and proudly provide complete and",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0008
+          },
+          {
+            "x": 2.381,
+            "y": 25.309,
+            "fs": 1.008,
+            "pw": 43.268,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "comprehensive solutions in a diverse range of areas such as Plant Hire, Construction,",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0007
+          },
+          {
+            "x": 2.381,
+            "y": 26.821,
+            "fs": 1.008,
+            "pw": 37.777,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Electrical, Mechanical, Maintenance, Civil, Rail and Modular Infrastructure.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0019
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 29.047,
+            "fs": 1.008,
+            "pw": 5.199,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Locations:",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0179
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 31.273,
+            "fs": 1.008,
+            "pw": 42.502,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "We currently operate across Perth and the Pilbara region with services available for",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.001
+          },
+          {
+            "x": 2.381,
+            "y": 32.785,
+            "fs": 1.008,
+            "pw": 24.928,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "even your most remote projects throughout WA.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 35.011,
+            "fs": 1.008,
+            "pw": 44.048,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "NWCR",
+                "w": 700
+              },
+              {
+                "t": " is dedicated to supporting our local communities and promoting opportunities",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0017
+          },
+          {
+            "x": 2.381,
+            "y": 36.523,
+            "fs": 1.008,
+            "pw": 20.749,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "for sustainable Indigenous employment.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0009
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 38.75,
+            "fs": 1.008,
+            "pw": 16.996,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Ngarluma Traditional Landowner",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0018
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 3.792,
+            "fs": 2.016,
+            "pw": 11.974,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "OUR STORY",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0213
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 6.018,
+            "fs": 1.008,
+            "pw": 24.756,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "In 2012, a remarkable and determined Ngarluma",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 7.53,
+            "fs": 1.008,
+            "pw": 26.386,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "woman by the name of Melanie Tavo (nee Lockyer –",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 9.042,
+            "fs": 1.008,
+            "pw": 27.551,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Hicks) launched Norwest Civil and Rail through a BHP",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 10.554,
+            "fs": 1.008,
+            "pw": 23.564,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "pilot program for local Indigenous businesses.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0011
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 12.78,
+            "fs": 1.008,
+            "pw": 24.79,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Her vision for Norwest was crystal clear from the",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0027
+          },
+          {
+            "x": 53.571,
+            "y": 14.292,
+            "fs": 1.008,
+            "pw": 26.095,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "start: to support her growing family and to develop",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0007
+          },
+          {
+            "x": 53.571,
+            "y": 15.804,
+            "fs": 1.008,
+            "pw": 38.652,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "opportunities for sustainable employment and independence underpinned",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0008
+          },
+          {
+            "x": 53.571,
+            "y": 17.316,
+            "fs": 1.008,
+            "pw": 39.859,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "by a culture of taking pride in hard work and unfailing integrity. Never shy of a",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0011
+          },
+          {
+            "x": 53.571,
+            "y": 18.828,
+            "fs": 1.008,
+            "pw": 39.835,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "challenge, Melanie’s drive and determination have seen the company develop",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 20.34,
+            "fs": 1.008,
+            "pw": 41.856,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "and expand into the multi-million-dollar operation it is today. It bears a new name",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.001
+          },
+          {
+            "x": 53.571,
+            "y": 21.852,
+            "fs": 1.008,
+            "pw": 43.515,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "commensurate with the vastly broader range of skills, services and equipment it now",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0013
+          },
+          {
+            "x": 53.571,
+            "y": 23.364,
+            "fs": 1.008,
+            "pw": 31.304,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "offers to best service its equally broad cross section of clients.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 25.59,
+            "fs": 1.008,
+            "pw": 43.168,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "The company is experiencing growth and remains an independent 100% Pilbara TLO",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0009
+          },
+          {
+            "x": 53.571,
+            "y": 27.102,
+            "fs": 1.008,
+            "pw": 41.957,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Indigenous owned company despite numerous offers to JV with industry partners",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0007
+          },
+          {
+            "x": 53.571,
+            "y": 28.614,
+            "fs": 1.008,
+            "pw": 7.366,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "over the years.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 74.405,
+            "y": 30.902,
+            "fs": 1.008,
+            "pw": 17.325,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "On the 25th August 2021, Norwest",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.405,
+            "y": 32.414,
+            "fs": 1.008,
+            "pw": 20.014,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Contracting and Rail became Melanie’s",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0016
+          },
+          {
+            "x": 74.405,
+            "y": 33.926,
+            "fs": 1.008,
+            "pw": 21.462,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "legacy for she left this physical world after",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.405,
+            "y": 35.438,
+            "fs": 1.008,
+            "pw": 22.686,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "being promoted to receive her Angel Wings.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.405,
+            "y": 36.95,
+            "fs": 1.008,
+            "pw": 21.777,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "We want you to know that Melanie’s vision",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.405,
+            "y": 38.462,
+            "fs": 1.008,
+            "pw": 20.543,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "for NWCR, for the industry the company",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0015
+          },
+          {
+            "x": 74.405,
+            "y": 39.973,
+            "fs": 1.008,
+            "pw": 22.408,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "serves, for the people it employs and for her",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.405,
+            "y": 41.485,
+            "fs": 1.008,
+            "pw": 22.726,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "two boys, stands truer now than ever before.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0007
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 74.405,
+            "y": 43.712,
+            "fs": 1.008,
+            "pw": 22.748,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "The responsibility and commitment of those",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0012
+          },
+          {
+            "x": 74.405,
+            "y": 45.224,
+            "fs": 1.008,
+            "pw": 22.439,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "chosen to continue Melanie’s legacy is deep",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.405,
+            "y": 46.735,
+            "fs": 1.008,
+            "pw": 21.019,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "and the Norwest Team is both proud and",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.405,
+            "y": 48.247,
+            "fs": 1.008,
+            "pw": 11.035,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "excited for our future.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "w": 1190.55,
+    "h": 841.89,
+    "spread": true,
+    "minFs": 12,
+    "units": [
+      {
+        "tag": "h2",
+        "cls": "title",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 5.682,
+            "fs": 3.696,
+            "pw": 21.857,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "Capabilities",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0011
+          },
+          {
+            "x": 2.381,
+            "y": 10.117,
+            "fs": 3.696,
+            "pw": 21.129,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "OVERVIEW",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0155
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 15.873,
+            "fs": 2.016,
+            "pw": 25.865,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "CONTRACTING SERVICES",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.014
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 3.333,
+              "y": 18.58,
+              "fs": 1.008,
+              "pw": 13.187,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Fencing and line marking",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0008
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 20.33,
+              "fs": 1.008,
+              "pw": 26.902,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Corrosion control, sand blasting & industrial painting",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0005
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 22.08,
+              "fs": 1.008,
+              "pw": 21.816,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Logistics & equipment transport, hot shots",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0012
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 23.83,
+              "fs": 1.008,
+              "pw": 19.941,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Traffic management & trained spotters",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0044
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 25.58,
+              "fs": 1.008,
+              "pw": 21.97,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Engineering, fabrication & site remediation",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 27.33,
+              "fs": 1.008,
+              "pw": 15.562,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Labour hire & skilled operators",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0011
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 29.08,
+              "fs": 1.008,
+              "pw": 25.247,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Armco railing, safety barriers supply & installation",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0018
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 30.83,
+              "fs": 1.008,
+              "pw": 7.905,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Road sweeping",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0006
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 23.333,
+            "y": 36.537,
+            "fs": 2.016,
+            "pw": 21.808,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "EQUIPMENT PROFILE",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0243
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 24.285,
+              "y": 39.244,
+              "fs": 1.008,
+              "pw": 12.767,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Mine Spec Light Vehicles",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 40.994,
+              "fs": 1.008,
+              "pw": 19.117,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Excavators (wheeled, tracked, Hi-Rail)",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0013
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 42.744,
+              "fs": 1.008,
+              "pw": 16.348,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Trucks (flat top, tipper, semi etc)",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 44.494,
+              "fs": 1.008,
+              "pw": 9.294,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Loaders & Graders",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0023
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 46.244,
+              "fs": 1.008,
+              "pw": 10.648,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Backhoe & skid steer",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 47.994,
+              "fs": 1.008,
+              "pw": 7.313,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Reach Stacker",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0021
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 49.744,
+              "fs": 1.008,
+              "pw": 14.88,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Water carts & Vacuum trucks",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 51.494,
+              "fs": 1.008,
+              "pw": 7.289,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Welding Units",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0005
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 53.244,
+              "fs": 1.008,
+              "pw": 3.467,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Rollers",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 54.994,
+              "fs": 1.008,
+              "pw": 14.276,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Dozers & Moxy dump trucks",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 56.744,
+              "fs": 1.008,
+              "pw": 11.501,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Concrete pump trucks",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0008
+            }
+          ],
+          [
+            {
+              "x": 24.285,
+              "y": 58.494,
+              "fs": 1.008,
+              "pw": 3.239,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "EWP’s",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 74.83,
+            "y": 10.964,
+            "fs": 2.016,
+            "pw": 23.336,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "ELECTRICAL SERVICES",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0138
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 74.83,
+            "y": 14.103,
+            "fs": 1.008,
+            "pw": 20.062,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "We operate under our electrical licence",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.83,
+            "y": 15.615,
+            "fs": 1.008,
+            "pw": 17.797,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "EC 15479 supported by an in family",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 74.83,
+            "y": 17.127,
+            "fs": 1.008,
+            "pw": 9.771,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "electrical engineer.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 75.782,
+              "y": 18.877,
+              "fs": 1.008,
+              "pw": 19.666,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Electrical tagging, Testing and Repairs",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0009
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 20.627,
+              "fs": 1.008,
+              "pw": 15.317,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Power Supply and Generation",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0018
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 22.377,
+              "fs": 1.008,
+              "pw": 12.523,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Process Control Systems",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 24.127,
+              "fs": 1.008,
+              "pw": 4.345,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Lighting",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 25.877,
+              "fs": 1.008,
+              "pw": 17.632,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "RFID Maintenance & Replacement",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 27.627,
+              "fs": 1.008,
+              "pw": 20.97,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Instrumentation, control, commissioning",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0008
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 29.377,
+              "fs": 1.008,
+              "pw": 20.741,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Underground and above ground cabling",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0005
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 31.127,
+              "fs": 1.008,
+              "pw": 15.008,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "HV underground cabling and",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0009
+            },
+            {
+              "x": 75.783,
+              "y": 32.639,
+              "fs": 1.008,
+              "pw": 12.904,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Maintenance Inspections",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 34.389,
+              "fs": 1.008,
+              "pw": 20.592,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "LV cabling to domestic, commercial and",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0006
+            },
+            {
+              "x": 75.783,
+              "y": 35.9,
+              "fs": 1.008,
+              "pw": 9.391,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "industrial building",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 75.782,
+              "y": 37.65,
+              "fs": 1.008,
+              "pw": 16.556,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Solar and renewable projects for",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0006
+            },
+            {
+              "x": 75.783,
+              "y": 39.162,
+              "fs": 1.008,
+              "pw": 13.553,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Commercial and domestic",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0012
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 53.539,
+            "y": 45.165,
+            "fs": 2.016,
+            "pw": 20.822,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "VEGETATION & PEST",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0212
+          },
+          {
+            "x": 53.539,
+            "y": 47.584,
+            "fs": 2.016,
+            "pw": 15.351,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "MANAGEMENT",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0164
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 54.491,
+              "y": 50.384,
+              "fs": 1.008,
+              "pw": 6.979,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Land clearing",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0007
+            }
+          ],
+          [
+            {
+              "x": 54.491,
+              "y": 52.134,
+              "fs": 1.008,
+              "pw": 13.587,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Vegetation & weed control",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0009
+            }
+          ],
+          [
+            {
+              "x": 54.491,
+              "y": 53.884,
+              "fs": 1.008,
+              "pw": 15.641,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Mine Spec Light Vehicle Boom",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            },
+            {
+              "x": 54.491,
+              "y": 55.396,
+              "fs": 1.008,
+              "pw": 4.541,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Spraying",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0058
+            }
+          ],
+          [
+            {
+              "x": 54.491,
+              "y": 57.146,
+              "fs": 1.008,
+              "pw": 14.331,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Pest management business",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0006
+            },
+            {
+              "x": 54.491,
+              "y": 58.658,
+              "fs": 1.008,
+              "pw": 9.434,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "registration #2704",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0019
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "w": 1190.55,
+    "h": 841.89,
+    "spread": true,
+    "minFs": 12,
+    "units": [
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 4.332,
+            "fs": 2.016,
+            "pw": 24.162,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "CIVIL & CONSTRUCTION",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0216
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 7.039,
+            "fs": 1.008,
+            "pw": 42.57,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Our civil & construction division provides reliable, high-quality services across Perth",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0006
+          },
+          {
+            "x": 2.381,
+            "y": 8.551,
+            "fs": 1.008,
+            "pw": 42.469,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "and regional WA. With strong local knowledge, a skilled Indigenous workforce, and",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 10.063,
+            "fs": 1.008,
+            "pw": 41.534,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "a commitment to safety, we support mining and infrastructure projects from site",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0032
+          },
+          {
+            "x": 2.381,
+            "y": 11.575,
+            "fs": 1.008,
+            "pw": 27.654,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "preparation through to construction and remediation.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0009
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 13.801,
+            "fs": 1.008,
+            "pw": 12.335,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Our capabilities include:",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 3.333,
+              "y": 16.027,
+              "fs": 1.008,
+              "pw": 14.872,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Civil earthworks and haulage",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0007
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 17.777,
+              "fs": 1.008,
+              "pw": 15.652,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Drainage and formation works",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0016
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 19.527,
+              "fs": 1.008,
+              "pw": 5.713,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Concreting",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0016
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 21.277,
+              "fs": 1.008,
+              "pw": 20.367,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Construction and maintenance of roads",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0006
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 23.027,
+              "fs": 1.008,
+              "pw": 10.161,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Signage installation",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0013
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 24.777,
+              "fs": 1.008,
+              "pw": 19.598,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Level crossing upgrades & compliance",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0014
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 26.527,
+              "fs": 1.008,
+              "pw": 15.339,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Bridge services & remediation",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 28.277,
+              "fs": 1.008,
+              "pw": 15.943,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Supply & Install ARMCO Railing",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.002
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 30.027,
+              "fs": 1.008,
+              "pw": 17.362,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Construction of noise barriers and",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0005
+            },
+            {
+              "x": 3.333,
+              "y": 31.539,
+              "fs": 1.008,
+              "pw": 7.502,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "retaining walls",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0019
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 33.289,
+              "fs": 1.008,
+              "pw": 10.84,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Pre-purchase reports",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 35.039,
+              "fs": 1.008,
+              "pw": 15.295,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Estimating and Cost planning",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0008
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 37.265,
+            "fs": 1.008,
+            "pw": 18.955,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Each project is delivered with a focus",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 38.777,
+            "fs": 1.008,
+            "pw": 20.851,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "on quality, efficiency, safety and creating",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0036
+          },
+          {
+            "x": 2.381,
+            "y": 40.289,
+            "fs": 1.008,
+            "pw": 20.086,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "meaningful employment opportunities",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0005
+          },
+          {
+            "x": 2.381,
+            "y": 41.801,
+            "fs": 1.008,
+            "pw": 9.317,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "within the Pilbara.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0013
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 54.286,
+            "y": 18.618,
+            "fs": 2.016,
+            "pw": 15.514,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "RAIL SERVICES",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0121
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 54.286,
+            "y": 21.325,
+            "fs": 1.008,
+            "pw": 39.918,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Our rail division delivers innovative solutions across the rail industry, providing",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0014
+          },
+          {
+            "x": 54.286,
+            "y": 22.837,
+            "fs": 1.008,
+            "pw": 41.186,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "engineering expertise, maintenance and project execution that enhances safety,",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0008
+          },
+          {
+            "x": 54.286,
+            "y": 24.349,
+            "fs": 1.008,
+            "pw": 12.387,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "efficiency and reliability.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0045
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 54.286,
+            "y": 26.099,
+            "fs": 1.008,
+            "pw": 12.335,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Our capabilities include:",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 55.238,
+              "y": 27.849,
+              "fs": 1.008,
+              "pw": 6.495,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Rail Welding",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 29.599,
+              "fs": 1.008,
+              "pw": 34.48,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Rail Construction – rail crossing upgrades, walkways & landing pads",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0018
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 31.349,
+              "fs": 1.008,
+              "pw": 9.471,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Signal Technicians",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0005
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 33.099,
+              "fs": 1.008,
+              "pw": 17.106,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Undercutting & bog hole removal",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0007
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 34.849,
+              "fs": 1.008,
+              "pw": 14.762,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Experienced hi-rail operators",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0026
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 36.599,
+              "fs": 1.008,
+              "pw": 21.579,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Track Protection Officers (Yard & Mainline)",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0029
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 38.349,
+              "fs": 1.008,
+              "pw": 10.568,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Traffic management",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0069
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 40.099,
+              "fs": 1.008,
+              "pw": 21.367,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Asset Health reports & life cycle strategies",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0012
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 41.849,
+              "fs": 1.008,
+              "pw": 22.679,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Ballast supply and delivery (ballast cleaning)",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0007
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 43.599,
+              "fs": 1.008,
+              "pw": 10.738,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Derailment response",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0021
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 45.349,
+              "fs": 1.008,
+              "pw": 9.444,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Slab track renewal",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0027
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 47.099,
+              "fs": 1.008,
+              "pw": 14.881,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Scrap rail clean-up & removal",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0028
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 48.849,
+              "fs": 1.008,
+              "pw": 9.255,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Ore car clean outs",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 55.238,
+              "y": 50.599,
+              "fs": 1.008,
+              "pw": 40.826,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Track Maintenance, re-rail, de-stressing, rail structure maintenance & inspection",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0016
+            },
+            {
+              "x": 55.238,
+              "y": 52.111,
+              "fs": 1.008,
+              "pw": 9.182,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "including culverts",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "w": 1190.55,
+    "h": 841.89,
+    "spread": true,
+    "minFs": 12,
+    "units": [
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 5.494,
+            "fs": 2.016,
+            "pw": 30.047,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "MODULAR INFRASTRUCTURE",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0207
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 8.201,
+            "fs": 1.008,
+            "pw": 41.042,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Pioneers in EPS-FR modular construction. From compact granny flats and office",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0016
+          },
+          {
+            "x": 2.381,
+            "y": 9.713,
+            "fs": 1.008,
+            "pw": 42.835,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "pods to multi-resort accommodations and warehouse builds, our modular solutions",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0006
+          },
+          {
+            "x": 2.381,
+            "y": 11.224,
+            "fs": 1.008,
+            "pw": 41.293,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "are scalable, compliant, and built to perform. We offer a smarter, faster and more",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 12.736,
+            "fs": 1.008,
+            "pw": 10.207,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "ethical way to build.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0007
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 3.333,
+              "y": 14.486,
+              "fs": 1.008,
+              "pw": 38.715,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Residential Builds",
+                  "w": 700
+                },
+                {
+                  "t": " - From single homes to townhouses, our modular system",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": -0.0027
+            },
+            {
+              "x": 3.333,
+              "y": 15.998,
+              "fs": 1.008,
+              "pw": 42.246,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "speeds up construction while delivering premium energy efficiency and durability.",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0021
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 18.463,
+              "fs": 1.008,
+              "pw": 41.384,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Commercial Projects",
+                  "w": 700
+                },
+                {
+                  "t": " – Fast-track your next retail, office, or industrial project with",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": -0.0014
+            },
+            {
+              "x": 3.333,
+              "y": 19.974,
+              "fs": 1.008,
+              "pw": 37.817,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "our scalable panel systems designed to meet strict compliance standards.",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 3.333,
+              "y": 22.439,
+              "fs": 1.008,
+              "pw": 38.013,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Collaboration & Integrated Approach",
+                  "w": 700
+                },
+                {
+                  "t": " – Whether for private, community, or",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": -0.0053
+            },
+            {
+              "x": 3.333,
+              "y": 23.951,
+              "fs": 1.008,
+              "pw": 24.372,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "commercial use, our systems flex to your needs.",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 26.415,
+            "fs": 1.008,
+            "pw": 40.234,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "From concept to completion, we ensure collaborative planning tailored to your",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0009
+          },
+          {
+            "x": 2.381,
+            "y": 27.927,
+            "fs": 1.008,
+            "pw": 39.964,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "needs, site conditions and compliance requirements. We guarantee precision-",
+                "w": 500
+              }
+            ],
+            "sep": "",
+            "ls": 0.001
+          },
+          {
+            "x": 2.381,
+            "y": 29.439,
+            "fs": 1.008,
+            "pw": 40.192,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "engineered panels manufactured locally using high-performance materials for",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 30.951,
+            "fs": 1.008,
+            "pw": 42.62,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "strength and thermal efficiency. Panels are delivered and assembled quickly by our",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0014
+          },
+          {
+            "x": 2.381,
+            "y": 32.463,
+            "fs": 1.008,
+            "pw": 24.025,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "trained team, cutting build times by up to 50%.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0011
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 34.213,
+            "fs": 1.008,
+            "pw": 19.997,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Build smarter, build faster, build better.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 55.342,
+            "y": 20.391,
+            "fs": 2.016,
+            "pw": 30.883,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "MECHANICAL & ENGINEERING",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0202
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 55.342,
+            "y": 23.53,
+            "fs": 1.008,
+            "pw": 36.982,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Our mechanical services division provides specialised engineering, asset",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 55.342,
+            "y": 25.042,
+            "fs": 1.008,
+            "pw": 41.224,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "maintenance and conveyor system solutions across the Pilbara and regional WA.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 55.342,
+            "y": 26.554,
+            "fs": 1.008,
+            "pw": 41.047,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "With experienced technicians, strong safety standards and the ability to support",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0015
+          },
+          {
+            "x": 55.342,
+            "y": 28.066,
+            "fs": 1.008,
+            "pw": 42.334,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "remote operations, we help mining, rail and industrial clients maximise equipment",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0012
+          },
+          {
+            "x": 55.342,
+            "y": 29.577,
+            "fs": 1.008,
+            "pw": 25.13,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "performance and extend the life of critical assets.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 55.342,
+            "y": 31.327,
+            "fs": 1.008,
+            "pw": 12.335,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Our capabilities include:",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 56.294,
+              "y": 33.077,
+              "fs": 1.008,
+              "pw": 14.238,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Asset condition assessment",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 34.827,
+              "fs": 1.008,
+              "pw": 18.532,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Engineering improvement solutions",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 36.577,
+              "fs": 1.008,
+              "pw": 22.661,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Pre-engineered product supply and support",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 38.327,
+              "fs": 1.008,
+              "pw": 26.906,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Reverse engineering of components and equipment",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 40.077,
+              "fs": 1.008,
+              "pw": 24.97,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Service life enhancement and asset optimisation",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 41.827,
+              "fs": 1.008,
+              "pw": 15.646,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Rubber lining turnkey projects",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 43.577,
+              "fs": 1.008,
+              "pw": 13.713,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Surface treatment services",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 45.327,
+              "fs": 1.008,
+              "pw": 17.623,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Pulley manufacturing and lagging",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 47.077,
+              "fs": 1.008,
+              "pw": 19.2,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Industrial coating and painting works",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 48.827,
+              "fs": 1.008,
+              "pw": 14.899,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Belt splice kit manufacturing",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0008
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 50.577,
+              "fs": 1.008,
+              "pw": 16.806,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Supply for conveyor belt projects",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0006
+            }
+          ],
+          [
+            {
+              "x": 56.294,
+              "y": 52.327,
+              "fs": 1.008,
+              "pw": 11.353,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Pre-shut/Wash downs",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 55.342,
+            "y": 54.792,
+            "fs": 1.008,
+            "pw": 37.463,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Through quality workmanship and technical expertise, we deliver reliable",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0006
+          },
+          {
+            "x": 55.342,
+            "y": 56.304,
+            "fs": 1.008,
+            "pw": 33.912,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "mechanical and engineering solutions suited to our clients’ needs.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "n": 6,
+    "w": 1190.55,
+    "h": 841.89,
+    "spread": true,
+    "minFs": 10,
+    "units": [
+      {
+        "tag": "h2",
+        "cls": "title",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 5.682,
+            "fs": 3.696,
+            "pw": 7.122,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "Our",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 10.117,
+            "fs": 3.696,
+            "pw": 19.743,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "PROJECTS",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0148
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 16.371,
+            "fs": 1.68,
+            "pw": 21.039,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "RAIL BRIDGE UPGRADES",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0249
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 18.136,
+            "fs": 0.84,
+            "pw": 4.592,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "RIO TINTO",
+                "w": 800
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 19.396,
+            "fs": 0.84,
+            "pw": 27.407,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "The scope involved replacing the existing vehicle driving surface",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0006
+          },
+          {
+            "x": 2.381,
+            "y": 20.656,
+            "fs": 0.84,
+            "pw": 26.818,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "by removing the existing plastic grating and replacing it with a",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0013
+          },
+          {
+            "x": 2.381,
+            "y": 21.916,
+            "fs": 0.84,
+            "pw": 27.119,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "new and approved True grid system, installation of new painted",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0005
+          },
+          {
+            "x": 2.381,
+            "y": 23.176,
+            "fs": 0.84,
+            "pw": 25.332,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "steel kerb sections along the length of bridge to reduce the",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 24.436,
+            "fs": 0.84,
+            "pw": 24.963,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "risk of vehicle impact on pedestrian handrail. This upgrade",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0016
+          },
+          {
+            "x": 2.381,
+            "y": 25.696,
+            "fs": 0.84,
+            "pw": 26.449,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "along with a speed restriction of 10km/h (from 20km/h) allows",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0013
+          },
+          {
+            "x": 2.381,
+            "y": 26.956,
+            "fs": 0.84,
+            "pw": 26.267,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "for 6400kg GVM vehicle crossing. The installation of approach",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0007
+          },
+          {
+            "x": 2.381,
+            "y": 28.216,
+            "fs": 0.84,
+            "pw": 27.416,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "kerbing at the bridge abutment access points to prevent vehicle",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 29.476,
+            "fs": 0.84,
+            "pw": 11.837,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "access to the East Walkway.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0009
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 34.048,
+            "fs": 1.68,
+            "pw": 41.213,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "R.O.W REMEDIATION – 100% INDIGENOUS CREW",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0201
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 36.214,
+            "fs": 0.84,
+            "pw": 4.493,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "CHEVRON",
+                "w": 800
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0014
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 37.474,
+            "fs": 0.84,
+            "pw": 42.356,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "This project involved vegetation clearing and repairing the drive surface of the ROW at the Domgas",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0007
+          },
+          {
+            "x": 2.381,
+            "y": 38.734,
+            "fs": 0.84,
+            "pw": 43.941,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Pipeway, with special consideration of adjacent cultural heritage areas. The works were completed by a",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0015
+          },
+          {
+            "x": 2.381,
+            "y": 39.994,
+            "fs": 0.84,
+            "pw": 9.662,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "100% Indigenous crew.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0005
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 4.066,
+            "fs": 1.68,
+            "pw": 30.908,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "PEDESTRIAN WALKWAY UPGRADES",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0213
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 5.831,
+            "fs": 0.84,
+            "pw": 4.592,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "RIO TINTO",
+                "w": 800
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 7.091,
+            "fs": 0.84,
+            "pw": 24.372,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "NWCR delivered walkway upgrades at Rio Tinto Rail Yard,",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0013
+          },
+          {
+            "x": 53.571,
+            "y": 8.351,
+            "fs": 0.84,
+            "pw": 24.005,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "including site clearing and grubbing, bulk earthworks to",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0005
+          },
+          {
+            "x": 53.571,
+            "y": 9.611,
+            "fs": 0.84,
+            "pw": 24.154,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "construct subgrade, installation of 3 × 12 m drainage CSP",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.002
+          },
+          {
+            "x": 53.571,
+            "y": 10.871,
+            "fs": 0.84,
+            "pw": 25.15,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "culverts, and erosion control to batters using geofabric and",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 12.131,
+            "fs": 0.84,
+            "pw": 24.971,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "rock protection. Works included installation of a reinforced",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0006
+          },
+          {
+            "x": 53.571,
+            "y": 13.391,
+            "fs": 0.84,
+            "pw": 25.464,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "32 MPa concrete walkway system with precast edge beams,",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 14.651,
+            "fs": 0.84,
+            "pw": 24.716,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "edge panels, and centre panels, along with handrails, wire",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0011
+          },
+          {
+            "x": 53.571,
+            "y": 15.91,
+            "fs": 0.84,
+            "pw": 24.967,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "fencing, maze barriers, and safety signage at rail crossings.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0016
+          },
+          {
+            "x": 53.571,
+            "y": 17.17,
+            "fs": 0.84,
+            "pw": 24.654,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "All works were undertaken under track access constraints",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0021
+          },
+          {
+            "x": 53.571,
+            "y": 18.43,
+            "fs": 0.84,
+            "pw": 25.91,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "with lookout protection, including a variation adding 42 m of",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 19.69,
+            "fs": 0.84,
+            "pw": 15.543,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "additional footpath to the site office.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0026
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 22.397,
+            "fs": 1.68,
+            "pw": 16.891,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "THE OASIS 12 UNITS",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.014
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 24.163,
+            "fs": 0.84,
+            "pw": 7.293,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "GOLDEN PONDS",
+                "w": 800
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 25.422,
+            "fs": 0.84,
+            "pw": 43.414,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "The 12-unit development at ",
+                "w": 500
+              },
+              {
+                "t": "Golden Ponds",
+                "w": 600,
+                "i": true
+              },
+              {
+                "t": " involved the construction of modern, two-bedroom holiday",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0005
+          },
+          {
+            "x": 53.571,
+            "y": 26.682,
+            "fs": 0.84,
+            "pw": 42.629,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "cabin designed to enhance the site’s short-stay and tourism accommodation. These units were built",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.001
+          },
+          {
+            "x": 53.571,
+            "y": 27.942,
+            "fs": 0.84,
+            "pw": 27.131,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "to a high-end finish, featuring fully equipped kitchens, spacious",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0017
+          },
+          {
+            "x": 53.571,
+            "y": 29.202,
+            "fs": 0.84,
+            "pw": 24.9,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "lounge and dining areas in our specialised panel system. A",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 30.462,
+            "fs": 0.84,
+            "pw": 23.132,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "key aspect of this project was the inclusion of ",
+                "w": 500
+              },
+              {
+                "t": "ACROD-",
+                "w": 600,
+                "i": true
+              }
+            ],
+            "sep": ""
+          },
+          {
+            "x": 53.571,
+            "y": 31.722,
+            "fs": 0.84,
+            "pw": 21.164,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "compliant facilities",
+                "w": 600,
+                "i": true
+              },
+              {
+                "t": " in specific units, ensuring the",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.002
+          },
+          {
+            "x": 53.571,
+            "y": 32.982,
+            "fs": 0.84,
+            "pw": 21.355,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "development met modern accessibility standards.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0016
+          },
+          {
+            "x": 53.571,
+            "y": 34.242,
+            "fs": 0.84,
+            "pw": 20.792,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "The build was executed to blend seamlessly with",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0005
+          },
+          {
+            "x": 53.571,
+            "y": 35.502,
+            "fs": 0.84,
+            "pw": 21.33,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "the surrounding landscaped gardens and tranquil",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0013
+          },
+          {
+            "x": 53.571,
+            "y": 36.762,
+            "fs": 0.84,
+            "pw": 21.088,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "lakes, providing a comfortable, home-away-from-",
+                "w": 500
+              }
+            ],
+            "sep": "",
+            "ls": 0.0028
+          },
+          {
+            "x": 53.571,
+            "y": 38.022,
+            "fs": 0.84,
+            "pw": 20.048,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "home experience for visitors while maintaining",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0009
+          },
+          {
+            "x": 53.571,
+            "y": 39.282,
+            "fs": 0.84,
+            "pw": 20.631,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "the durability required for a high-turnover rental",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.002
+          },
+          {
+            "x": 53.571,
+            "y": 40.542,
+            "fs": 0.84,
+            "pw": 5.744,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "environment.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 43.588,
+            "fs": 1.68,
+            "pw": 18.218,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "600M² GYM FACILITY",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0069
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 45.353,
+            "fs": 0.84,
+            "pw": 8.954,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "LEONORA MINESITE",
+                "w": 800
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 46.613,
+            "fs": 0.84,
+            "pw": 42.95,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "The",
+                "w": 500
+              },
+              {
+                "t": " 600m² ",
+                "w": 600,
+                "i": true
+              },
+              {
+                "t": "mine site gym facility stands as a benchmark for rapid, high-performance construction in",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0014
+          },
+          {
+            "x": 53.571,
+            "y": 47.873,
+            "fs": 0.84,
+            "pw": 43.409,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "extreme environments, having been fully completed in just 30 days. Utilising our specialised insulated",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0008
+          },
+          {
+            "x": 53.571,
+            "y": 49.133,
+            "fs": 0.84,
+            "pw": 40.923,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "panel system, we were able to significantly compress the traditional construction timeline while",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0015
+          },
+          {
+            "x": 53.571,
+            "y": 50.393,
+            "fs": 0.84,
+            "pw": 33.096,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "delivering a structure specifically engineered for the harsh Australian climate.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0019
+          },
+          {
+            "x": 53.571,
+            "y": 51.653,
+            "fs": 0.84,
+            "pw": 32.146,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "A critical advantage of this build is the superior thermal performance of the",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0008
+          },
+          {
+            "x": 53.571,
+            "y": 52.913,
+            "fs": 0.84,
+            "pw": 31.976,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "panel system. With a high R-value insulation core, the facility was designed",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0009
+          },
+          {
+            "x": 53.571,
+            "y": 54.172,
+            "fs": 0.84,
+            "pw": 28.58,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "to maintain a stable, cool internal environment even when external",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0009
+          },
+          {
+            "x": 53.571,
+            "y": 55.432,
+            "fs": 0.84,
+            "pw": 29.942,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "temperatures exceeded 40°C. This thermal efficiency not only ensures",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0022
+          },
+          {
+            "x": 53.571,
+            "y": 56.692,
+            "fs": 0.84,
+            "pw": 27.374,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "a comfortable and safe training space for site personnel but also",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0013
+          },
+          {
+            "x": 53.571,
+            "y": 57.952,
+            "fs": 0.84,
+            "pw": 26.68,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "drastically reduces the long-term energy costs associated with",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0011
+          },
+          {
+            "x": 53.571,
+            "y": 59.212,
+            "fs": 0.84,
+            "pw": 19.77,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "cooling a large-scale facility in the desert heat.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0012
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "n": 7,
+    "w": 1190.55,
+    "h": 841.89,
+    "spread": true,
+    "minFs": 10,
+    "units": [
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 8.055,
+            "fs": 1.68,
+            "pw": 41.013,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "WESTERN ANIMAL NUTRITION FEEDMILL PLANT",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0232
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 9.82,
+            "fs": 0.84,
+            "pw": 10.33,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "WILEY CONSTRUCTION",
+                "w": 800
+              }
+            ],
+            "sep": " ",
+            "ls": 0.002
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 11.08,
+            "fs": 0.84,
+            "pw": 24.776,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Fabrication of structural components including grid mesh",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0011
+          },
+          {
+            "x": 2.381,
+            "y": 12.34,
+            "fs": 0.84,
+            "pw": 23.842,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "and handrails – Erecting of 30% structural steel and 70%",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0017
+          },
+          {
+            "x": 2.381,
+            "y": 13.6,
+            "fs": 0.84,
+            "pw": 22.791,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "mechanical equipment. Project timeline 2021 to 2023.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 14.86,
+            "fs": 0.84,
+            "pw": 23.311,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "The project was led by our management team on site",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0124
+          },
+          {
+            "x": 2.381,
+            "y": 16.12,
+            "fs": 0.84,
+            "pw": 23.067,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "implementing a structured construction method with",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0005
+          },
+          {
+            "x": 2.381,
+            "y": 17.38,
+            "fs": 0.84,
+            "pw": 23.695,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "structural hold points for mechanical install followed by",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0013
+          },
+          {
+            "x": 2.381,
+            "y": 18.64,
+            "fs": 0.84,
+            "pw": 23.195,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "a survey all to be documented by our QA/QC Manager.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 2.381,
+            "y": 19.9,
+            "fs": 0.84,
+            "pw": 14.931,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Building a deliverable MDR package.",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": -0.024
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 29.245,
+            "fs": 1.68,
+            "pw": 44.302,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "KARRATHA PORT WALER BEAMS & ANCHOR HEADS",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0233
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 31.011,
+            "fs": 0.84,
+            "pw": 8.186,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "CLOUGH / SAIPEM",
+                "w": 800
+              }
+            ],
+            "sep": " ",
+            "ls": 0.006
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 2.381,
+            "y": 32.271,
+            "fs": 0.84,
+            "pw": 42.229,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "Manufacturing 960 anchor heads and 160 Waler beams in a period of 3 months, project included all",
+                "w": 500
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0005
+          },
+          {
+            "x": 2.381,
+            "y": 33.53,
+            "fs": 0.84,
+            "pw": 22.302,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "fabrication and weld tests, as well as blast and paint.",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "h2",
+        "cls": "title",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 5.682,
+            "fs": 3.696,
+            "pw": 7.122,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "Our",
+                "w": 500
+              }
+            ],
+            "sep": " "
+          },
+          {
+            "x": 53.571,
+            "y": 10.117,
+            "fs": 3.696,
+            "pw": 15.082,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "VALUES",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0143
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 15.198,
+            "fs": 1.68,
+            "pw": 16.08,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "COMPANY VALUES",
+                "w": 700
+              }
+            ],
+            "sep": " ",
+            "ls": -0.0211
+          }
+        ]
+      },
+      {
+        "tag": "h4",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 17.41,
+            "fs": 0.84,
+            "pw": 9.638,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "SAFETY COMES FIRST",
+                "w": 800
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0014
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 54.523,
+              "y": 18.922,
+              "fs": 1.008,
+              "pw": 25.2,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Everything we do as a business starts with safety.",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0019
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 20.672,
+              "fs": 1.008,
+              "pw": 33.686,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Having the right resources for the job such as people / equipment",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 22.422,
+              "fs": 1.008,
+              "pw": 16.865,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Planning the work we undertake",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0012
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 24.172,
+              "fs": 1.008,
+              "pw": 20.735,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Managing the change that is introduced",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 25.922,
+              "fs": 1.008,
+              "pw": 21.185,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Reviewing the work to improve next time",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "h4",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 28.134,
+            "fs": 0.84,
+            "pw": 4.052,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "RESPECT",
+                "w": 800
+              }
+            ],
+            "sep": " ",
+            "ls": 0.0017
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 54.523,
+              "y": 29.646,
+              "fs": 1.008,
+              "pw": 19.207,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Our people are the key to our success",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 31.396,
+              "fs": 1.008,
+              "pw": 30.769,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Involve and listen to others, demand an inclusive work place",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 33.146,
+              "fs": 1.008,
+              "pw": 19.931,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Listen to our clients and seek feedback",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "h4",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 35.358,
+            "fs": 0.84,
+            "pw": 3.917,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "QUALITY",
+                "w": 800
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 54.523,
+              "y": 36.87,
+              "fs": 1.008,
+              "pw": 39.067,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Endeavour to give the best value for money in terms of effort, skill and results.",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": -0.008
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 38.62,
+              "fs": 1.008,
+              "pw": 18.111,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Develop a reputation for excellence",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0007
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 40.37,
+              "fs": 1.008,
+              "pw": 34.953,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Provide a positive environment to work to get the best out of people",
+                  "w": 500
+                }
+              ],
+              "sep": " "
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "h4",
+        "cls": "label",
+        "lines": [
+          {
+            "x": 53.571,
+            "y": 42.583,
+            "fs": 0.84,
+            "pw": 4.713,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "INTEGRITY",
+                "w": 800
+              }
+            ],
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "ul",
+        "items": [
+          [
+            {
+              "x": 54.523,
+              "y": 44.094,
+              "fs": 1.008,
+              "pw": 25.588,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Be consistent in the delivery of our commitments.",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0007
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 45.844,
+              "fs": 1.008,
+              "pw": 42.894,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Be transparent with our short falls, demonstrate our learning from these challenges",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0022
+            }
+          ],
+          [
+            {
+              "x": 54.523,
+              "y": 47.594,
+              "fs": 1.008,
+              "pw": 39.068,
+              "c": "#231f20",
+              "s": [
+                {
+                  "t": "Continually train and develop our people to ensure we prepare for tomorrow",
+                  "w": 500
+                }
+              ],
+              "sep": " ",
+              "ls": 0.0008
+            }
+          ]
+        ]
+      },
+      {
+        "tag": "iso",
+        "items": [
+          {
+            "x": 66.524,
+            "y": 58.295,
+            "fs": 1.021,
+            "label": "Quality",
+            "code": "ISO 9001"
+          },
+          {
+            "x": 73.159,
+            "y": 58.295,
+            "fs": 1.021,
+            "label": "Environmental",
+            "code": "ISO 14001"
+          },
+          {
+            "x": 79.795,
+            "y": 58.295,
+            "fs": 1.021,
+            "label": "Health & Safety",
+            "code": "ISO 45001"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "n": 8,
+    "w": 595.28,
+    "h": 841.89,
+    "spread": false,
+    "minFs": 10,
+    "units": [
+      {
+        "tag": "h2",
+        "cls": "big",
+        "lines": [
+          {
+            "x": 24.131,
+            "y": 17.632,
+            "fs": 6.048,
+            "pw": 51.737,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "NWCR IS READY.",
+                "w": 700
+              }
+            ],
+            "cx": 50,
+            "sep": " ",
+            "ls": -0.0165
+          },
+          {
+            "x": 21.906,
+            "y": 24.016,
+            "fs": 6.048,
+            "pw": 56.188,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "WILL YOU JOIN US",
+                "w": 700
+              }
+            ],
+            "cx": 50,
+            "sep": " ",
+            "ls": -0.0292
+          },
+          {
+            "x": 8.332,
+            "y": 30.4,
+            "fs": 6.048,
+            "pw": 83.336,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "AS A PILLAR FOR CHANGE?",
+                "w": 700
+              }
+            ],
+            "cx": 50,
+            "sep": " ",
+            "ls": -0.0272
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "lead",
+        "lines": [
+          {
+            "x": 27.04,
+            "y": 35.743,
+            "fs": 2.352,
+            "pw": 45.919,
+            "c": "#ffffff",
+            "s": [
+              {
+                "t": "Please reach out to our fantastic team!",
+                "w": 700
+              }
+            ],
+            "cx": 50,
+            "sep": " ",
+            "ls": -0.0186
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 43.925,
+            "y": 95.907,
+            "fs": 2.016,
+            "pw": 13.546,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "0438 039 433",
+                "w": 500
+              }
+            ],
+            "cx": 50.698,
+            "token": "phone",
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 39.771,
+            "y": 98.93,
+            "fs": 2.016,
+            "pw": 21.856,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "admin@nwcr.com.au",
+                "w": 500
+              }
+            ],
+            "cx": 50.698,
+            "token": "email",
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 41.512,
+            "y": 101.954,
+            "fs": 2.016,
+            "pw": 18.915,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "www.nwcr.com.au",
+                "w": 500
+              }
+            ],
+            "cx": 50.97,
+            "token": "website",
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "cls": "body",
+        "lines": [
+          {
+            "x": 42.715,
+            "y": 106.407,
+            "fs": 1.68,
+            "pw": 15.967,
+            "c": "#231f20",
+            "s": [
+              {
+                "t": "ABN: 63 161 195 777",
+                "w": 500
+              }
+            ],
+            "cx": 50.699,
+            "token": "abn",
+            "sep": " "
+          }
+        ]
+      },
+      {
+        "tag": "h3",
+        "cls": "heading",
+        "lines": [
+          {
+            "x": 34.997,
+            "y": 118.686,
+            "fs": 4.032,
+            "pw": 31.403,
+            "c": "#005fa4",
+            "s": [
+              {
+                "t": "NWCR CLIENTS",
+                "w": 700
+              }
+            ],
+            "cx": 50.699,
+            "sep": " ",
+            "ls": -0.0227
+          }
+        ]
+      }
+    ]
+  }
+]

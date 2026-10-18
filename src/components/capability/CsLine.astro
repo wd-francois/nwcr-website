@@ -1,0 +1,61 @@
+---
+/**
+ * One line of capability statement text. In the exact layout it is absolutely
+ * positioned at the PDF's coordinates; when the page reflows it is plain inline text.
+ *
+ * The markup is built as one string on purpose: whitespace matters here (a line
+ * ending in a hyphen must join the next line with no space), and a template could
+ * gain stray spaces when it is reformatted.
+ */
+import type { CsLine } from '../../data/capabilityStatement';
+import { mailto, site, siteUrl } from '../../config/site';
+
+interface Props {
+  line: CsLine;
+  /** Add the flyer's soft drop shadow (white text on photography). */
+  shadow?: boolean;
+}
+
+const { line, shadow = false } = Astro.props;
+
+const esc = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+const style = [
+  `--x:${line.x}`,
+  `--y:${line.y}`,
+  `--fs:${line.fs}`,
+  `--c:${line.c}`,
+  line.ls ? `--ls:${line.ls}` : '',
+  line.cx !== undefined ? `--cx:${line.cx}` : '',
+]
+  .filter(Boolean)
+  .join(';');
+
+const weight = line.s[0]?.w ?? 500;
+const link = (href: string, text: string) =>
+  `<a href="${esc(href)}" style="font-weight:${weight}">${esc(text)}</a>`;
+const plain = (text: string) => `<span style="font-weight:${weight}">${esc(text)}</span>`;
+
+const tokens: Record<NonNullable<CsLine['token']>, () => string> = {
+  phone: () => link(`tel:${site.phone.e164}`, site.phone.display),
+  email: () => link(mailto('Capability statement enquiry'), site.email),
+  website: () => link('/', new URL(siteUrl).host),
+  abn: () => plain(`ABN: ${site.abn}`),
+};
+
+const inner = line.token
+  ? tokens[line.token]()
+  : line.s
+      .map(
+        (s) =>
+          `<span style="font-weight:${s.w}${s.i ? ';font-style:italic' : ''}">${esc(s.t)}</span>`,
+      )
+      .join('');
+
+const classes = shadow ? 'cs-line cs-shadow' : 'cs-line';
+const center = line.cx !== undefined ? ' data-center' : '';
+const html = `<span class="${classes}"${center} style="${style}">${inner}</span>${esc(line.sep)}`;
+---
+
+<Fragment set:html={html} />

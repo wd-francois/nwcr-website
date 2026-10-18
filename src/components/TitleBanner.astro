@@ -1,0 +1,47 @@
+---
+/**
+ * Section title banner: white heading text on an organic navy "brush" shape,
+ * like the page titles in the capability statement. With `bleed`, the shape
+ * runs off the left edge of the screen as it does in the flyer.
+ */
+import OvalTrail from './OvalTrail.astro';
+
+interface Props {
+  bleed?: boolean;
+  ovals?: boolean;
+  class?: string;
+}
+
+const { bleed = false, ovals = true, class: className } = Astro.props;
+---
+
+<div class:list={['title-banner relative isolate inline-block max-w-full', className]}>
+  {bleed && (
+    <span
+      aria-hidden="true"
+      class="absolute inset-y-[6%] right-12 left-[-100vw] -z-10 rounded-r-3xl bg-navy"
+    />
+  )}
+  <svg
+    aria-hidden="true"
+    focusable="false"
+    class="absolute inset-0 -z-10 h-full w-full text-navy"
+    viewBox="0 0 600 220"
+    preserveAspectRatio="none"
+  >
+    <path
+      fill="currentColor"
+      d="M22 40C70 10 170 16 262 9c98-7 208-10 286 10 40 10 50 52 44 92-5 36 8 72-26 92-58 31-176 15-276 17-100 2-196 10-252-12C4 194 12 156 8 118 4 86-2 58 22 40Z"
+    ></path>
+  </svg>
+  <div class:list={['relative py-6 pr-10 sm:py-8', bleed ? 'pl-0' : 'pl-6 sm:pl-10']}>
+    <slot />
+  </div>
+  {ovals && (
+    <OvalTrail
+      tone="white"
+      count={6}
+      class="pointer-events-none absolute -right-14 bottom-3 hidden w-28 sm:block"
+    />
+  )}
+</div>

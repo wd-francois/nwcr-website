@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ConcentricCircles from '../components/ConcentricCircles.astro';
+import Icon from '../components/Icon.astro';
+import PageHero from '../components/PageHero.astro';
+import SplitHeading from '../components/SplitHeading.astro';
+import { mailto, site } from '../config/site';
+import { roles } from '../data/roles';
+import heroImage from '../assets/placeholders/landscape-kite.jpg';
+
+const reasons = [
+  {
+    title: 'Indigenous-owned and led',
+    text: 'Join a 100% Pilbara Traditional Owner Indigenous-owned business, built on pride in hard work and integrity.',
+  },
+  {
+    title: 'Safety comes first',
+    text: 'Everything we do starts with safety — the right people and equipment for the job, and work that is properly planned.',
+  },
+  {
+    title: 'Training and development',
+    text: 'We continually train and develop our people so they are ready for tomorrow.',
+  },
+  {
+    title: 'An inclusive workplace',
+    text: 'Our people are the key to our success. We involve and listen to each other.',
+  },
+  {
+    title: 'Mentoring and support',
+    text: 'Our team includes an accredited Indigenous mentor and life coach.',
+  },
+  {
+    title: 'Varied work across WA',
+    text: 'Rail, civil, electrical, mechanical, modular and contracting projects across Perth and the Pilbara.',
+  },
+];
+---
+
+<BaseLayout
+  title="Careers"
+  description="Build your career with NWCR, a 100% Indigenous-owned contracting business in WA. Safety first, training and development, and a focus on Indigenous employment."
+>
+  <PageHero
+    light="Work"
+    bold="With us"
+    intro="We are committed to sustainable Indigenous employment and to developing skilled, safe and proud teams across the Pilbara and Perth."
+    image={heroImage}
+    imageAlt="A wedge-tailed eagle in flight low over red earth and green spinifex"
+    blob={4}
+    breadcrumbs={[{ label: 'Careers' }]}
+  />
+
+  <section aria-labelledby="why-heading" class="on-light py-20 sm:py-28">
+    <div class="container-site">
+      <SplitHeading id="why-heading" light="Why" bold="Work with NWCR" />
+      <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {reasons.map((r) => (
+          <li class="rounded-4xl bg-sand p-7">
+            <h3 class="text-lg font-extrabold">{r.title}</h3>
+            <p class="mt-3 leading-relaxed text-muted">{r.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section
+    aria-labelledby="indigenous-employment-heading"
+    class="relative isolate overflow-hidden bg-night py-20 text-white sm:py-24"
+  >
+    <ConcentricCircles class="pointer-events-none absolute -bottom-32 -left-32 -z-10 size-120 text-white/6" />
+    <div class="container-site max-w-4xl">
+      <SplitHeading
+        id="indigenous-employment-heading"
+        light="Indigenous"
+        bold="Employment"
+        tone="white"
+      />
+      <p class="mt-8 text-lg leading-relaxed text-white/90">
+        NWCR was founded to create sustainable employment and independence for Indigenous people. We
+        can deliver projects with 100% Indigenous crews, and we encourage Aboriginal and Torres
+        Strait Islander people to apply.
+      </p>
+      <a href="/indigenous-tribute/" class="btn-outline-light mt-8">
+        Read our Indigenous Tribute <Icon name="arrow" class="size-4" />
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="roles-heading" class="on-light py-20 sm:py-28">
+    <div class="container-site">
+      <SplitHeading id="roles-heading" light="Current" bold="Roles" />
+      {roles.length > 0 ? (
+        <ul class="mt-12 grid gap-6 md:grid-cols-2">
+          {roles.map((r) => (
+            <li class="flex flex-col rounded-4xl bg-white p-8 shadow-sm ring-1 ring-sand-deep">
+              <h3 class="text-xl font-extrabold">{r.title}</h3>
+              <p class="mt-1 text-sm font-bold tracking-wide text-ochre uppercase">
+                {r.location} · {r.type}
+              </p>
+              <p class="mt-4 flex-1 leading-relaxed text-muted">{r.summary}</p>
+              <a href={mailto(`Application: ${r.title}`)} class="btn-primary mt-6 self-start">
+                Apply for {r.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="mt-12 rounded-4xl bg-sand p-8 sm:p-12">
+          <h3 class="text-xl font-extrabold">There are no advertised roles right now</h3>
+          <p class="mt-3 max-w-2xl text-lg leading-relaxed">
+            We are always keen to hear from skilled, safety-minded people — especially Aboriginal
+            and Torres Strait Islander candidates. Send us your resume and tell us about the work
+            you do.
+          </p>
+        </div>
+      )}
+
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <a href={mailto('Career enquiry')} class="btn-primary">
+          <Icon name="mail" class="size-4" /> Email your resume to {site.email}
+        </a>
+        <a href={`tel:${site.phone.e164}`} class="btn-outline-navy">
+          <Icon name="phone" class="size-4" /> Call {site.phone.display}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

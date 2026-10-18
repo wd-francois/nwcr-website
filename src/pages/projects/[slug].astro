@@ -1,0 +1,120 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getImage } from 'astro:assets';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import Icon from '../../components/Icon.astro';
+import PageHero from '../../components/PageHero.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+export const getStaticPaths = (async () => {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({ params: { slug: project.id }, props: { project } }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const d = project.data;
+
+// Share image cropped from the project photo.
+const ogImage = await getImage({ src: d.image, width: 1200, height: 630, format: 'jpg' });
+
+const facts = [
+  { label: 'Client', value: d.client },
+  { label: 'Location', value: d.location },
+  { label: 'Period', value: d.period },
+  { label: 'Sector', value: d.sectors.join(', ') },
+].filter((f): f is { label: string; value: string } => Boolean(f.value));
+
+const others = (await getCollection('projects', (p) => p.id !== project.id))
+  .sort(
+    (a, b) =>
+      Number(b.data.sectors.some((s) => d.sectors.includes(s))) -
+        Number(a.data.sectors.some((s) => d.sectors.includes(s))) || a.data.order - b.data.order,
+  )
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title={`${d.title}${d.client ? ` — ${d.client}` : ''}`}
+  description={d.summary}
+  ogImage={{
+    src: ogImage.src,
+    width: Number(ogImage.attributes.width),
+    height: Number(ogImage.attributes.height),
+  }}
+>
+  <PageHero
+    light={d.heading.light}
+    bold={d.heading.bold}
+    image={d.image}
+    imageAlt={d.imageAlt}
+    blob={((d.order % 4) + 1) as 1 | 2 | 3 | 4}
+    breadcrumbs={[{ label: 'Projects', href: '/projects/' }, { label: d.title }]}
+  >
+    <p class="mt-8 max-w-2xl text-lg leading-relaxed sm:text-xl">{d.summary}</p>
+  </PageHero>
+
+  <article aria-labelledby="scope-heading" class="on-light py-16 sm:py-24">
+    <div class="container-site grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-7">
+        <h2 id="scope-heading" class="text-2xl font-extrabold sm:text-3xl">
+          Scope of works
+        </h2>
+        <div class="prose-nwcr mt-6">
+          <Content />
+        </div>
+      </div>
+      <aside class="space-y-8 lg:col-span-5" aria-label="Project details">
+        <dl class="divide-y divide-sand-deep rounded-4xl bg-sand p-7 sm:p-9">
+          {facts.map((f) => (
+            <div class="grid grid-cols-[7rem_1fr] gap-4 py-3 first:pt-0 last:pb-0">
+              <dt class="font-bold text-bush-green">{f.label}</dt>
+              <dd class="font-semibold text-ink">{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+        {d.highlights.length > 0 && (
+          <div class="rounded-4xl bg-night p-7 text-white sm:p-9">
+            <h2 class="text-xl font-extrabold text-white">Highlights</h2>
+            <ul class="mt-5 space-y-3">
+              {d.highlights.map((h) => (
+                <li class="flex gap-3">
+                  <Icon name="check" class="mt-0.5 size-5 text-gold" />
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </article>
+
+  <section aria-labelledby="more-projects-heading" class="on-light bg-sand py-20 sm:py-24">
+    <div class="container-site">
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <h2 id="more-projects-heading" class="text-2xl font-extrabold sm:text-3xl">
+          More projects
+        </h2>
+        <a href="/projects/" class="btn-outline-navy self-start">
+          All projects <Icon name="arrow" class="size-4" />
+        </a>
+      </div>
+      <ul class="mt-12 grid gap-14 md:grid-cols-3 md:gap-8 lg:gap-12">
+        {others.map((p, i) => (
+          <li>
+            <ProjectCard project={p} variant={(((i + 2) % 4) + 1) as 1 | 2 | 3 | 4} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

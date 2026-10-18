@@ -1,0 +1,222 @@
+---
+import { Picture } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlobImage from '../components/BlobImage.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+import ConcentricCircles from '../components/ConcentricCircles.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Icon from '../components/Icon.astro';
+import IsoBadges from '../components/IsoBadges.astro';
+import OvalTrail from '../components/OvalTrail.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import SplitHeading from '../components/SplitHeading.astro';
+import heroArtwork from '../assets/capability/cover.jpg';
+import riverAerial from '../assets/placeholders/landscape-river-aerial.jpg';
+import railCorridor from '../assets/placeholders/service-rail.jpg';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+const featured = (await getCollection('projects', (p) => p.data.featured))
+  .sort((a, b) => a.data.order - b.data.order)
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title="Home"
+  fullTitle="Norwest Contracting & Rail | 100% Indigenous-owned contracting in WA"
+  description="NWCR is a 100% Pilbara Traditional Owner (Ngarluma) Indigenous-owned business delivering rail, civil, electrical, mechanical, modular and contracting services across WA."
+>
+  <!-- Hero: the capability statement cover artwork (night sky, Pilbara sunset, Aboriginal artwork) -->
+  <section class="relative isolate overflow-hidden bg-night text-white">
+    <Picture
+      src={heroArtwork}
+      alt=""
+      formats={['avif', 'webp']}
+      widths={[640, 960, 1280, 1600, 2000, 2400]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+      pictureAttributes={{ class: 'absolute inset-0 -z-20 block h-full w-full' }}
+      class="h-full w-full object-cover object-[50%_100%] sm:object-[50%_85%] lg:object-[50%_80%]"
+    />
+    <!-- Darkens the sky behind the text so it stays readable at every crop -->
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 -z-10 bg-linear-to-r from-night/75 via-night/35 to-transparent"
+    ></div>
+
+    <div class="container-site pt-16 pb-60 sm:pt-20 sm:pb-72 lg:pt-28 lg:pb-80">
+      <div class="max-w-3xl">
+        <SplitHeading
+          as="h1"
+          tone="white"
+          size="xl"
+          light="Keeping your resources"
+          bold="on track"
+        />
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
+          Delivering rail, civil, electrical, mechanical, modular and contracting services across
+          Perth, the Pilbara and remote Western Australia.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="/services/" class="btn-gold">
+            Explore our services <Icon name="arrow" class="size-4" />
+          </a>
+          <a href="/contact/" class="btn-outline-light">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we are -->
+  <section aria-labelledby="who-heading" class="on-light relative overflow-hidden py-20 sm:py-28">
+    <div class="container-site grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <div class="min-w-0">
+        <SplitHeading id="who-heading" light="Who" bold="we are" />
+        <div class="mt-8 space-y-5 text-lg leading-relaxed">
+          <p>
+            <strong class="font-bold text-navy">NWCR</strong> is a 100% Ngarluma Traditional
+            Owner-owned business, committed to delivering safe, efficient and cost-effective
+            contracting services while supporting the local communities in which we operate.
+          </p>
+          <p>
+            For more than a decade we have provided complete, practical solutions in plant hire,
+            construction, electrical, mechanical, maintenance, civil, rail and modular
+            infrastructure.
+          </p>
+          <p>
+            We are dedicated to supporting our local communities and creating opportunities for
+            sustainable Indigenous employment.
+          </p>
+        </div>
+        <a href="/about/" class="btn-outline-navy mt-9">
+          Read our story <Icon name="arrow" class="size-4" />
+        </a>
+      </div>
+      <div class="relative">
+        <OvalTrail
+          tone="navy"
+          path="wave"
+          count={10}
+          class="pointer-events-none absolute -bottom-14 -left-10 w-72"
+        />
+        <BlobImage
+          src={riverAerial}
+          alt="Aerial view of a river winding through green Pilbara country"
+          variant={1}
+          ring
+          sizes="(min-width: 1280px) 580px, (min-width: 1024px) 45vw, 100vw"
+          aspect="aspect-6/5"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section
+    aria-labelledby="services-heading"
+    class="on-light relative overflow-hidden bg-sand py-20 sm:py-28"
+  >
+    <ConcentricCircles class="pointer-events-none absolute -top-32 -right-32 size-120 text-navy/6" />
+    <div class="container-site relative">
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div>
+          <SplitHeading id="services-heading" light="Our" bold="Services" />
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed">
+            One Indigenous-owned partner for rail, civil, electrical, mechanical, modular,
+            contracting, vegetation management and equipment hire.
+          </p>
+        </div>
+        <a href="/services/" class="btn-navy shrink-0 self-start md:self-auto">
+          All services <Icon name="arrow" class="size-4" />
+        </a>
+      </div>
+      <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map((s) => (
+          <li>
+            <ServiceCard service={s} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Featured projects -->
+  <section aria-labelledby="projects-heading" class="on-light py-20 sm:py-28">
+    <div class="container-site">
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div>
+          <SplitHeading id="projects-heading" light="Our" bold="Projects" />
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed">
+            A selection of recent rail, modular and fabrication work for our clients.
+          </p>
+        </div>
+        <a href="/projects/" class="btn-outline-navy shrink-0 self-start md:self-auto">
+          All projects <Icon name="arrow" class="size-4" />
+        </a>
+      </div>
+      <ul class="mt-14 grid gap-14 md:grid-cols-3 md:gap-8 lg:gap-12">
+        {featured.map((p, i) => (
+          <li>
+            <ProjectCard project={p} variant={((i % 4) + 1) as 1 | 2 | 3 | 4} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Indigenous Tribute teaser -->
+  <section
+    aria-labelledby="tribute-heading"
+    class="relative isolate overflow-hidden bg-night text-white"
+  >
+    <ConcentricCircles class="pointer-events-none absolute -right-24 -bottom-24 -z-10 size-96 text-white/6" />
+    <div class="container-site grid items-center gap-12 py-20 sm:py-28 lg:grid-cols-2 lg:gap-20">
+      <BlobImage
+        src={railCorridor}
+        alt="A Pilbara rail line stretching towards the horizon"
+        variant={3}
+        ring
+        sizes="(min-width: 1280px) 580px, (min-width: 1024px) 45vw, 100vw"
+        aspect="aspect-5/4"
+      />
+      <div class="min-w-0">
+        <p class="eyebrow text-gold">Indigenous Tribute</p>
+        <h2
+          id="tribute-heading"
+          class="mt-4 text-3xl leading-tight font-light text-white sm:text-4xl"
+        >
+          Honouring the rail gang that{' '}
+          <strong class="font-extrabold uppercase">made history</strong>
+        </h2>
+        <p class="mt-6 text-lg leading-relaxed text-white/90">
+          In 1968, a Torres Strait Islander rail gang set a world track-laying record on the Mt
+          Newman line: 7 km in 11 hours 40 minutes. Their legacy runs through more than 2,000 km of
+          Pilbara track — and through our commitment to Indigenous employment today.
+        </p>
+        <a href="/indigenous-tribute/" class="btn-gold mt-9">
+          Read the Indigenous Tribute <Icon name="arrow" class="size-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients and certifications -->
+  <section aria-labelledby="clients-heading" class="on-light bg-sand py-20 sm:py-24">
+    <div class="container-site">
+      <div class="text-center">
+        <SplitHeading id="clients-heading" light="Trusted by" bold="Our clients" />
+      </div>
+      <ClientLogos class="mt-12" />
+      <div class="mt-16 flex flex-col items-center gap-6">
+        <h3 class="text-sm font-bold tracking-[0.14em] text-bush-green uppercase">
+          Certified management systems
+        </h3>
+        <IsoBadges class="justify-center" />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

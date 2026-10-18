@@ -1,0 +1,321 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import { mainNav, site } from '../config/site';
+import Icon from './Icon.astro';
+import logoMark from '../assets/brand/logo-mark.png';
+import logoWordmark from '../assets/brand/logo-wordmark.png';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+const path = Astro.url.pathname;
+const isCurrent = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+---
+
+<header class="on-light sticky top-0 z-40 border-b border-sand-deep bg-white/95 backdrop-blur-md">
+  <div class="container-site flex h-18 items-center justify-between gap-4 lg:h-20">
+    <a href="/" class="flex shrink-0 items-center gap-2.5 rounded-md">
+      <Image
+        src={logoMark}
+        alt=""
+        width={57}
+        densities={[1, 2]}
+        loading="eager"
+        class="h-11 w-auto lg:h-12"
+      />
+      <Image
+        src={logoWordmark}
+        alt={`${site.name} — home`}
+        width={108}
+        densities={[1, 2]}
+        loading="eager"
+        class="h-8 w-auto lg:h-9"
+      />
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav aria-label="Main" class="hidden lg:block">
+      <ul class="flex items-center gap-1 text-[0.9rem] font-semibold xl:gap-2">
+        {mainNav.map((item) =>
+          item.href === '/services/' ? (
+            <li class="relative" data-dropdown>
+              <div class="flex items-center">
+                <a
+                  href={item.href}
+                  class:list={[
+                    'nav-link rounded-l-md py-2 pr-1 pl-3 whitespace-nowrap',
+                    { 'nav-link-current': isCurrent(item.href) },
+                  ]}
+                  aria-current={path === item.href ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+                <button
+                  type="button"
+                  class="nav-link grid size-8 place-items-center rounded-md"
+                  aria-expanded="false"
+                  aria-controls="services-menu"
+                  data-dropdown-toggle
+                >
+                  <Icon name="chevron" class="size-4 transition-transform" />
+                  <span class="sr-only">Show service pages</span>
+                </button>
+              </div>
+              <div
+                id="services-menu"
+                hidden
+                class="absolute top-full left-1/2 w-xl -translate-x-1/2 pt-3"
+                data-dropdown-panel
+              >
+                <ul class="grid grid-cols-2 gap-1 rounded-2xl border border-sand-deep bg-white p-3 shadow-2xl shadow-night/15">
+                  {services.map((s) => (
+                    <li>
+                      <a
+                        href={`/services/${s.id}/`}
+                        class="block rounded-xl px-4 py-3 text-ink hover:bg-sand focus-visible:bg-sand"
+                        aria-current={path === `/services/${s.id}/` ? 'page' : undefined}
+                      >
+                        <span class="block font-bold text-navy">{s.data.title}</span>
+                      </a>
+                    </li>
+                  ))}
+                  <li class="col-span-2 mt-1 border-t border-sand-deep pt-2">
+                    <a
+                      href="/services/"
+                      class="flex items-center gap-2 rounded-xl px-4 py-3 font-bold text-bush-green hover:bg-sand"
+                    >
+                      All services overview <Icon name="arrow" class="size-4" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          ) : (
+            <li>
+              <a
+                href={item.href}
+                class:list={[
+                  'nav-link rounded-md px-3 py-2 whitespace-nowrap',
+                  { 'nav-link-current': isCurrent(item.href) },
+                ]}
+                aria-current={path === item.href ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ),
+        )}
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      {site.capabilityStatement.enabled && (
+        <a
+          href={site.capabilityStatement.href}
+          class="btn-primary hidden min-h-11 px-5 whitespace-nowrap sm:inline-flex lg:hidden xl:inline-flex"
+        >
+          <Icon name="document" class="size-4" />
+          <span>
+            <span class="sr-only xl:not-sr-only">View </span>Capability Statement
+          </span>
+        </a>
+      )}
+      <button
+        type="button"
+        class="grid size-11 place-items-center rounded-full text-navy hover:bg-sand lg:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-menu-open
+      >
+        <Icon name="menu" class="size-6" />
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile slide-out menu (native modal dialog: background is inert, Esc closes) -->
+  <dialog
+    id="mobile-menu"
+    aria-label="Main menu"
+    class="mobile-menu on-light fixed inset-y-0 right-0 left-auto m-0 h-dvh max-h-none w-[min(24rem,100%)] max-w-none overflow-y-auto bg-white p-0 text-ink shadow-2xl"
+  >
+    <div class="flex h-18 items-center justify-between border-b border-sand-deep px-5">
+      <span class="font-extrabold tracking-wide text-navy uppercase">Menu</span>
+      <button
+        type="button"
+        class="grid size-11 place-items-center rounded-full text-navy hover:bg-sand"
+        data-menu-close
+      >
+        <Icon name="close" class="size-6" />
+        <span class="sr-only">Close menu</span>
+      </button>
+    </div>
+    <nav aria-label="Mobile" class="px-5 py-4">
+      <ul class="divide-y divide-sand-deep text-lg font-semibold">
+        {mainNav.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="block py-3 text-navy"
+              aria-current={path === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+            {item.href === '/services/' && (
+              <ul class="mb-3 ml-1 space-y-1 border-l-2 border-gold pl-4 text-base font-medium">
+                {services.map((s) => (
+                  <li>
+                    <a
+                      href={`/services/${s.id}/`}
+                      class="block py-1.5 text-ink"
+                      aria-current={path === `/services/${s.id}/` ? 'page' : undefined}
+                    >
+                      {s.data.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+      {site.capabilityStatement.enabled && (
+        <a href={site.capabilityStatement.href} class="btn-primary mt-6 w-full">
+          <Icon name="document" class="size-4" /> View Capability Statement
+        </a>
+      )}
+      <div class="mt-6 space-y-2 text-sm">
+        <a href={`tel:${site.phone.e164}`} class="flex items-center gap-2 font-semibold text-navy">
+          <Icon name="phone" class="size-4" />
+          {site.phone.display}
+        </a>
+        <a href={`mailto:${site.email}`} class="flex items-center gap-2 font-semibold text-navy">
+          <Icon name="mail" class="size-4" />
+          {site.email}
+        </a>
+      </div>
+    </nav>
+  </dialog>
+</header>
+
+<style>
+  .nav-link {
+    color: var(--color-ink);
+    transition: color 0.15s;
+  }
+  .nav-link:hover,
+  .nav-link-current {
+    color: var(--color-navy);
+  }
+  .nav-link-current {
+    text-decoration: underline;
+    text-decoration-color: var(--color-gold);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.5em;
+  }
+  [aria-expanded='true'] :global(svg) {
+    transform: rotate(180deg);
+  }
+
+  .mobile-menu::backdrop {
+    background: rgb(11 30 63 / 0.6);
+  }
+  .mobile-menu[open] {
+    animation: slide-in 0.25s ease-out;
+  }
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+  }
+</style>
+
+<script>
+  // ---- Services dropdown (click, touch, keyboard, hover) ----
+  for (const item of document.querySelectorAll<HTMLElement>('[data-dropdown]')) {
+    const toggle = item.querySelector<HTMLButtonElement>('[data-dropdown-toggle]');
+    const panel = item.querySelector<HTMLElement>('[data-dropdown-panel]');
+    if (!toggle || !panel) continue;
+
+    let hoverTimer: number | undefined;
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      panel.hidden = !open;
+    };
+    const isOpen = () => toggle.getAttribute('aria-expanded') === 'true';
+
+    toggle.addEventListener('click', () => setOpen(!isOpen()));
+
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen()) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    item.addEventListener('focusout', (e) => {
+      if (!item.contains(e.relatedTarget as Node | null)) setOpen(false);
+    });
+    document.addEventListener('click', (e) => {
+      if (isOpen() && !item.contains(e.target as Node)) setOpen(false);
+    });
+
+    // Hover opens on devices with a real pointer; touch uses the toggle button.
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      item.addEventListener('mouseenter', () => {
+        window.clearTimeout(hoverTimer);
+        setOpen(true);
+      });
+      item.addEventListener('mouseleave', () => {
+        hoverTimer = window.setTimeout(() => setOpen(false), 180);
+      });
+    }
+  }
+
+  // ---- Mobile menu (modal <dialog> + explicit focus trap) ----
+  const dialog = document.getElementById('mobile-menu') as HTMLDialogElement | null;
+  const openBtn = document.querySelector<HTMLButtonElement>('[data-menu-open]');
+  const closeBtn = dialog?.querySelector<HTMLButtonElement>('[data-menu-close]');
+
+  if (dialog && openBtn) {
+    const close = () => dialog.close();
+
+    openBtn.addEventListener('click', () => {
+      dialog.showModal();
+      openBtn.setAttribute('aria-expanded', 'true');
+      closeBtn?.focus();
+    });
+    closeBtn?.addEventListener('click', close);
+
+    dialog.addEventListener('close', () => {
+      openBtn.setAttribute('aria-expanded', 'false');
+      openBtn.focus();
+    });
+
+    // Click on the backdrop closes the menu.
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) close();
+    });
+
+    // Keep Tab / Shift+Tab inside the menu.
+    dialog.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+      const focusable = [
+        ...dialog.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'),
+      ].filter((el) => el.offsetParent !== null);
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (!first || !last) return;
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+
+    // Close if the viewport grows to the desktop layout.
+    window.matchMedia('(min-width: 64rem)').addEventListener('change', (e) => {
+      if (e.matches && dialog.open) close();
+    });
+  }
+</script>

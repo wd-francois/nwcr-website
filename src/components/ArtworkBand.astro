@@ -1,0 +1,56 @@
+---
+/**
+ * The band of artwork along the bottom of each capability statement page.
+ *
+ * IMPORTANT — cultural rule: the flyer artwork is Aboriginal art. Only ever use
+ * the supplied, licensed artwork files. Never generate, trace or imitate
+ * Aboriginal dot art with code, SVG or AI.
+ *
+ * To enable it, drop the licensed artwork file into src/assets/brand/artwork/
+ * (jpg, png, webp or avif). The first file found is used.
+ *
+ * TODO: artwork — awaiting the licensed artwork file and web-use permission
+ * (see CONTENT_TODO.md). Until then a plain sunset gradient is shown.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const files = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/brand/artwork/*.{jpg,jpeg,png,webp,avif}',
+  { eager: true },
+);
+const artwork = Object.values(files)[0]?.default;
+const showDevLabel = import.meta.env.DEV;
+---
+
+{artwork ? (
+  <div class:list={['relative h-20 overflow-hidden sm:h-28 lg:h-32', className]}>
+    <Image
+      src={artwork}
+      alt=""
+      widths={[640, 1280, 1920].filter((w) => w <= artwork.width)}
+      sizes="100vw"
+      class="h-full w-full object-cover object-top"
+    />
+  </div>
+) : (
+  <div
+    data-placeholder="artwork"
+    class:list={[
+      'relative h-3 bg-linear-to-r from-ochre via-burnt-orange to-gold sm:h-4',
+      className,
+    ]}
+  >
+    {showDevLabel && (
+      <span class="absolute inset-x-0 -top-6 text-center text-xs font-bold text-ochre">
+        TODO: artwork placeholder — add the licensed file to src/assets/brand/artwork/
+      </span>
+    )}
+  </div>
+)}

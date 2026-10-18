@@ -1,0 +1,120 @@
+---
+/**
+ * One page (or two-page spread) of the capability statement.
+ *
+ * - Exact layout: the page artwork as a background and every line of text placed at
+ *   its PDF position (used when the page is wide enough for text ≥ 11 px, and in print).
+ * - Reflowed layout: the same text in normal flow with the page's photos and the
+ *   artwork strip, for small screens.
+ */
+import { Picture } from 'astro:assets';
+import type { CsPage } from '../../data/capabilityStatement';
+import ClientLogos from '../ClientLogos.astro';
+import CsLine from './CsLine.astro';
+import artworkStrip from '../../assets/capability/artwork-strip.jpg';
+
+interface Props {
+  page: CsPage;
+  total: number;
+}
+
+const { page, total } = Astro.props;
+const eager = page.n === 1;
+const shadowFor = (c: string) => page.n === 8 && c === '#ffffff';
+---
+
+<section
+  class:list={[
+    'cs-frame',
+    `cs-bp-${page.replicaFrom}`,
+    page.spread ? 'cs-spread' : 'cs-portrait',
+    `cs-page-${page.n}`,
+  ]}
+  aria-label={`Page ${page.n} of ${total}`}
+>
+  <div class="cs-canvas" style={`--ar:${page.w} / ${page.h}`}>
+    <div class="cs-bg">
+      <Picture
+        src={page.bg}
+        alt={page.bgAlt}
+        formats={['avif', 'webp']}
+        widths={page.spread ? [1000, 1440, 1920, 2400] : [480, 760, 1140, 1600]}
+        sizes={
+          page.spread ? '(min-width: 1500px) 1440px, 100vw' : '(min-width: 800px) 760px, 100vw'
+        }
+        loading={eager ? 'eager' : 'lazy'}
+        fetchpriority={eager ? 'high' : 'auto'}
+        pictureAttributes={{ class: 'block h-full w-full' }}
+        class="h-full w-full"
+      />
+    </div>
+
+    <div class="cs-content">
+      {page.units.map((u) => {
+        if (u.tag === 'ul') {
+          return (
+            <ul class="cs-list">
+              {u.items.map((item) => (
+                <li>
+                  {item.map((line) => (
+                    <CsLine line={line} />
+                  ))}
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        if (u.tag === 'iso') {
+          return (
+            <ul class="cs-iso" aria-label="Certifications">
+              {u.items.map((it) => (
+                <li style={`--x:${it.x};--y:${it.y};--fs:${it.fs}`}>
+                  <span class="cs-iso-label">{it.label}</span>{' '}
+                  <span class="cs-iso-code">{it.code}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        const Tag = u.tag;
+        return (
+          <Tag class:list={[`cs-${u.cls}`, { 'sr-only': u.hidden }]}>
+            {u.lines.map((line) => (
+              <CsLine line={line} shadow={shadowFor(line.c)} />
+            ))}
+          </Tag>
+        );
+      })}
+
+      {page.photos.length > 0 && (
+        <ul class="cs-flow-only cs-photos" aria-label="Photos">
+          {page.photos.map((ph, i) => (
+            <li>
+              <Picture
+                src={ph.src}
+                alt={ph.alt}
+                formats={['avif', 'webp']}
+                widths={[320, 480, 640].filter((w) => w <= ph.src.width)}
+                sizes="(min-width: 640px) 300px, 45vw"
+                class="cs-photo"
+                style={`border-radius: var(--radius-blob-${(i % 4) + 1})`}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
+      {page.n === 8 && <ClientLogos class="cs-flow-only cs-clients" />}
+    </div>
+
+    <div class="cs-flow-only cs-strip" aria-hidden="true">
+      <Picture
+        src={artworkStrip}
+        alt=""
+        formats={['avif', 'webp']}
+        widths={[640, 1280]}
+        sizes="100vw"
+        class="h-full w-full object-cover"
+      />
+    </div>
+  </div>
+</section>

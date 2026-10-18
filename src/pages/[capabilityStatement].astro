@@ -1,0 +1,54 @@
+---
+import type { GetStaticPaths } from 'astro';
+import '../styles/capability.css';
+import '@fontsource-variable/montserrat/wght-italic.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CulturalAdvice from '../components/CulturalAdvice.astro';
+import Icon from '../components/Icon.astro';
+import CapabilityPage from '../components/capability/CapabilityPage.astro';
+import { replicaCss } from '../components/capability/replicaCss';
+import { capabilityPages } from '../data/capabilityStatement';
+import { site } from '../config/site';
+
+// Published at /capability-statement/ only while site.capabilityStatement.enabled is true.
+export const getStaticPaths = (() =>
+  site.capabilityStatement.enabled
+    ? [{ params: { capabilityStatement: 'capability-statement' } }]
+    : []) satisfies GetStaticPaths;
+---
+
+<BaseLayout
+  title="Capability Statement 2026"
+  description="NWCR's 2026 capability statement: who we are, our story, rail, civil, electrical, mechanical, modular and contracting capabilities, projects, values and clients."
+>
+  <style is:global set:html={replicaCss} />
+
+  <div class="cs-viewer bg-sand-deep pb-16 sm:pb-24">
+    <div class="cs-toolbar on-light container-site py-6 sm:py-8">
+      <Breadcrumbs items={[{ label: 'Capability Statement' }]} />
+      <div class="mt-5 flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <CulturalAdvice class="max-w-2xl" />
+        <button type="button" class="btn-navy shrink-0 self-start" data-print>
+          <Icon name="print" class="size-4" /> Print or save as PDF
+        </button>
+      </div>
+    </div>
+
+    <div class="cs-pages flex flex-col gap-8 px-4 sm:gap-12 sm:px-6 lg:px-8">
+      {capabilityPages.map((page) => (
+        <CapabilityPage page={page} total={capabilityPages.length} />
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  // Load every page image before opening the print dialog (pages below the fold are lazy-loaded).
+  document.querySelector('[data-print]')?.addEventListener('click', async () => {
+    const images = [...document.querySelectorAll<HTMLImageElement>('.cs-bg img')];
+    for (const img of images) img.loading = 'eager';
+    await Promise.all(images.map((img) => img.decode().catch(() => undefined)));
+    window.print();
+  });
+</script>

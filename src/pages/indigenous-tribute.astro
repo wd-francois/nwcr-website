@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlobImage from '../components/BlobImage.astro';
+import ConcentricCircles from '../components/ConcentricCircles.astro';
+import CulturalAdvice from '../components/CulturalAdvice.astro';
+import OvalTrail from '../components/OvalTrail.astro';
+import PageHero from '../components/PageHero.astro';
+import SplitHeading from '../components/SplitHeading.astro';
+import gorge from '../assets/placeholders/landscape-gorge.jpg';
+// TODO: replace with licensed historic photographs (see IMAGES_TODO.md).
+import historicPlaceholder from '../assets/placeholders/historic-rail-gang-placeholder.jpg';
+import monumentPlaceholder from '../assets/placeholders/port-hedland-monument-placeholder.jpg';
+
+const record = [
+  { value: '1968', label: 'A world track-laying record on the Mt Newman line' },
+  { value: '7 km', label: 'of track laid in 11 hours 40 minutes' },
+  { value: '2,000+ km', label: 'of Pilbara track — the legacy of these workers' },
+];
+
+const partners = ['Nyamal', 'Ngarluma', 'Nyangumarta', 'Warnman', 'Kariyarra'];
+---
+
+<BaseLayout
+  title="Indigenous Tribute"
+  description="Honouring the 1968 Torres Strait Islander rail gang who set a world track-laying record on the Mt Newman line, and NWCR's commitment to Indigenous employment."
+>
+  <PageHero
+    light="Indigenous"
+    bold="Tribute"
+    intro="Honouring the Torres Strait Islander rail workers whose skill and endurance helped build the Pilbara's railways."
+    image={gorge}
+    imageAlt="Red rock walls of a Pilbara gorge rising above a still pool"
+    blob={1}
+    breadcrumbs={[{ label: 'Indigenous Tribute' }]}
+  >
+    <CulturalAdvice class="mt-8" />
+  </PageHero>
+
+  <!-- The 1968 rail gang -->
+  <section aria-labelledby="record-heading" class="on-light py-20 sm:py-28">
+    <div class="container-site grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <div>
+        <SplitHeading id="record-heading" light="The 1968" bold="Rail gang" />
+        <div class="mt-8 space-y-5 text-lg leading-relaxed">
+          <p>
+            In 1968, a Torres Strait Islander rail gang set a world record for track-laying on the
+            Mt Newman line, laying 7 km of track in 11 hours and 40 minutes.
+          </p>
+          <p>
+            Their achievement is part of a lasting legacy: more than 2,000 km of track across the
+            Pilbara.
+          </p>
+        </div>
+      </div>
+      <!-- TODO: replace with a licensed historic photograph of the rail gang. -->
+      <BlobImage
+        src={historicPlaceholder}
+        alt=""
+        variant={2}
+        sizes="(min-width: 1280px) 580px, (min-width: 1024px) 45vw, 100vw"
+        aspect="aspect-8/5"
+      />
+    </div>
+
+    <div class="container-site mt-20">
+      <dl class="grid gap-6 md:grid-cols-3">
+        {record.map((r) => (
+          <div class="flex flex-col rounded-4xl bg-sand p-8">
+            <dt class="order-2 mt-2 leading-snug text-muted">{r.label}</dt>
+            <dd class="order-1 text-4xl font-extrabold text-navy sm:text-5xl">{r.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <!-- Remembered -->
+  <section
+    aria-labelledby="remembered-heading"
+    class="relative isolate overflow-hidden bg-night py-20 text-white sm:py-28"
+  >
+    <ConcentricCircles class="pointer-events-none absolute -top-32 -right-32 -z-10 size-120 text-white/6" />
+    <div class="container-site grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <!-- TODO: replace with a licensed photograph of the Port Hedland monument. -->
+      <BlobImage
+        src={monumentPlaceholder}
+        alt=""
+        variant={3}
+        sizes="(min-width: 1280px) 520px, (min-width: 1024px) 40vw, 100vw"
+        aspect="aspect-square"
+        class="mx-auto w-full max-w-md lg:order-2"
+      />
+      <div class="lg:order-1">
+        <SplitHeading
+          id="remembered-heading"
+          light="Remembered in"
+          bold="Port Hedland"
+          tone="white"
+        />
+        <div class="mt-8 space-y-5 text-lg leading-relaxed text-white/90">
+          <p>A monument in Port Hedland honours the rail gang and their record.</p>
+          <p>
+            In 2018, at a gathering to mark the 50th anniversary of the record, workers and their
+            families returned to share their stories.
+          </p>
+        </div>
+        <OvalTrail tone="gold" count={9} class="mt-10 w-48 opacity-80" />
+      </div>
+    </div>
+  </section>
+
+  <!-- NWCR commitment -->
+  <section aria-labelledby="commitment-heading" class="on-light py-20 sm:py-28">
+    <div class="container-site grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <SplitHeading id="commitment-heading" light="Our" bold="Commitment" />
+        <p class="mt-8 text-lg leading-relaxed">
+          As a 100% Indigenous-owned business, we carry this legacy forward through our commitment
+          to Indigenous employment.
+        </p>
+      </div>
+      <ul class="grid gap-6 sm:grid-cols-2 lg:col-span-7">
+        <li class="rounded-4xl bg-sand p-7">
+          <h3 class="text-lg font-extrabold">Indigenous employment</h3>
+          <p class="mt-3 leading-relaxed text-muted">
+            We create opportunities for sustainable Indigenous employment in the communities where
+            we work.
+          </p>
+        </li>
+        <li class="rounded-4xl bg-sand p-7">
+          <h3 class="text-lg font-extrabold">Mentoring and life coaching</h3>
+          <p class="mt-3 leading-relaxed text-muted">
+            Our team includes an accredited Indigenous mentor and life coach.
+          </p>
+        </li>
+        <li class="rounded-4xl bg-sand p-7">
+          <h3 class="text-lg font-extrabold">100% Indigenous crews</h3>
+          <p class="mt-3 leading-relaxed text-muted">
+            We can deliver work with 100% Indigenous crews.{' '}
+            <a href="/projects/row-remediation-chevron/" class="link">
+              See our right-of-way remediation for Chevron
+            </a>
+          </p>
+        </li>
+        <li class="rounded-4xl bg-sand p-7">
+          <h3 class="text-lg font-extrabold">Our JV partners</h3>
+          <ul class="mt-3 space-y-1 leading-relaxed text-muted">
+            {partners.map((p) => (
+              <li>{p}</li>
+            ))}
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container-site mt-20">
+      <div class="rounded-4xl border-2 border-sand-deep p-8 text-center sm:p-12">
+        <p class="mx-auto max-w-2xl text-lg leading-relaxed">
+          Interested in building your career with an Indigenous-owned business?
+        </p>
+        <a href="/careers/" class="link mt-4 inline-block text-lg">
+          Find out about careers at NWCR
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

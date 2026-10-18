@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BlobImage from '../components/BlobImage.astro';
+import ConcentricCircles from '../components/ConcentricCircles.astro';
+import CtaBand from '../components/CtaBand.astro';
+import CulturalAdvice from '../components/CulturalAdvice.astro';
+import Icon from '../components/Icon.astro';
+import IsoBadges from '../components/IsoBadges.astro';
+import OvalTrail from '../components/OvalTrail.astro';
+import PageHero from '../components/PageHero.astro';
+import SplitHeading from '../components/SplitHeading.astro';
+import { site } from '../config/site';
+import { values } from '../data/values';
+import coastAerial from '../assets/placeholders/landscape-coast-aerial.jpg';
+import riverGums from '../assets/placeholders/landscape-river-gums.jpg';
+// TODO: confirm with family — replace with an approved photo of Melanie Tavo, and add alt text
+// that names her, only once the family has approved its use. Do not hotlink or reuse other images.
+import founderPhoto from '../assets/placeholders/melanie-tavo-placeholder.jpg';
+---
+
+<BaseLayout
+  title="About Us — Our Story"
+  description="NWCR was founded in 2012 by Ngarluma woman Melanie Tavo. Learn about our story, our values and our ISO certifications."
+>
+  <PageHero
+    light="Our"
+    bold="Story"
+    intro="A 100% Pilbara Traditional Owner Indigenous-owned business, founded in 2012 and built on pride in hard work and integrity."
+    image={coastAerial}
+    imageAlt="Aerial view of turquoise water meeting a rocky Pilbara coastline"
+    breadcrumbs={[{ label: 'About' }]}
+  >
+    <CulturalAdvice class="mt-8" />
+  </PageHero>
+
+  <!-- Who we are -->
+  <section aria-labelledby="who-heading" class="on-light py-20 sm:py-28">
+    <div class="container-site grid gap-14 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-5">
+        <SplitHeading id="who-heading" light="Who" bold="we are" />
+      </div>
+      <div class="space-y-5 text-lg leading-relaxed lg:col-span-7">
+        <p>
+          <strong class="font-bold text-navy">{site.name} (NWCR)</strong> is a 100% Ngarluma
+          Traditional Owner-owned business, committed to delivering safe, efficient and
+          cost-effective contracting services while supporting the local communities in which we
+          operate.
+        </p>
+        <p>
+          We have been in operation for more than a decade, providing complete solutions in plant
+          hire, construction, electrical, mechanical, maintenance, civil, rail and modular
+          infrastructure.
+        </p>
+        <p>
+          We operate across Perth and the Pilbara.{' '}
+          {site.serviceArea}
+        </p>
+        <p>
+          NWCR is dedicated to supporting our local communities and creating opportunities for
+          sustainable Indigenous employment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder story -->
+  <section
+    aria-labelledby="story-heading"
+    class="on-light relative overflow-hidden bg-sand py-20 sm:py-28"
+  >
+    <ConcentricCircles class="pointer-events-none absolute -top-24 -right-24 size-112 text-navy/6" />
+    <div class="container-site relative grid items-start gap-14 lg:grid-cols-12 lg:gap-16">
+      <div class="mx-auto w-full max-w-sm lg:col-span-4 lg:max-w-none">
+        <!-- TODO: confirm with family — placeholder only, not a photo of Melanie. -->
+        <BlobImage
+          src={founderPhoto}
+          alt=""
+          variant={4}
+          ring
+          sizes="(min-width: 1024px) 380px, 384px"
+          widths={[400, 760]}
+          aspect="aspect-4/5"
+        />
+      </div>
+      <div class="lg:col-span-8">
+        <SplitHeading id="story-heading" light="Melanie's" bold="Vision" />
+        <div class="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed">
+          <p>
+            In 2012, Ngarluma woman Melanie Tavo (née Lockyer-Hicks) founded the company as Norwest
+            Civil and Rail, through a BHP pilot program for local Indigenous businesses.
+          </p>
+          <p>
+            Melanie's vision was clear from the start: to support her family and to create
+            opportunities for sustainable employment and independence, built on pride in hard work
+            and integrity.
+          </p>
+          <p>
+            Through her drive and determination, the business grew into a multi-million-dollar
+            operation. It was renamed {site.name} to reflect its much broader range of skills,
+            services and equipment. Despite many offers of joint ventures over the years, NWCR has
+            remained independent and 100% Indigenous-owned.
+          </p>
+          <p>
+            Melanie passed away on 25 August 2021. {site.name} continues as her legacy. Her vision —
+            for the industry the company serves, for the people it employs and for her two sons —
+            guides the team that carries the business forward.
+          </p>
+        </div>
+        <div class="mt-10 max-w-3xl rounded-4xl bg-white p-7 shadow-sm ring-1 ring-sand-deep sm:p-8">
+          <h3 class="text-lg font-extrabold">Indigenous Tribute</h3>
+          <p class="mt-2 leading-relaxed text-muted">
+            NWCR has an accredited Indigenous mentor and life coach who can assist with support
+            programs.
+          </p>
+          <a href="/indigenous-tribute/" class="btn-outline-navy mt-5">
+            Read the Indigenous Tribute <Icon name="arrow" class="size-4" />
+          </a>
+        </div>
+        <OvalTrail tone="navy" count={10} class="mt-10 w-56" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section
+    aria-labelledby="values-heading"
+    class="relative isolate overflow-hidden bg-night py-20 text-white sm:py-28"
+  >
+    <ConcentricCircles class="pointer-events-none absolute -bottom-32 -left-32 -z-10 size-120 text-white/6" />
+    <div class="container-site">
+      <SplitHeading id="values-heading" light="Our" bold="Values" tone="white" />
+      <ul class="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {values.map((v) => (
+          <li class="rounded-4xl bg-white/7 p-7 ring-1 ring-white/15">
+            <h3 class="text-xl font-extrabold text-gold uppercase">{v.title}</h3>
+            <ul class="mt-5 space-y-3 text-white/90">
+              {v.points.map((pt) => (
+                <li class="flex gap-3 leading-snug">
+                  <Icon name="check" class="mt-0.5 size-4 text-gold" />
+                  <span>{pt}</span>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section aria-labelledby="certs-heading" class="on-light py-20 sm:py-28">
+    <div class="container-site grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <div>
+        <SplitHeading id="certs-heading" light="Certified" bold="Systems" />
+        <p class="mt-8 text-lg leading-relaxed">
+          NWCR is certified to the international standards for quality, environmental management and
+          occupational health and safety management.
+        </p>
+        <IsoBadges class="mt-8 flex-col items-start" />
+        <dl class="mt-10 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-2xl bg-sand p-5">
+            <dt class="text-sm font-bold text-bush-green">Electrical licence</dt>
+            <dd class="mt-1 text-lg font-extrabold text-navy">{site.electricalLicence}</dd>
+          </div>
+          <div class="rounded-2xl bg-sand p-5">
+            <dt class="text-sm font-bold text-bush-green">Pest management registration</dt>
+            <dd class="mt-1 text-lg font-extrabold text-navy">
+              #{site.pestManagementRegistration}
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <BlobImage
+        src={riverGums}
+        alt="River red gums along a Pilbara riverbank"
+        variant={2}
+        ring
+        sizes="(min-width: 1280px) 580px, (min-width: 1024px) 45vw, 100vw"
+        widths={[400, 640, 834]}
+        aspect="aspect-5/4"
+      />
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>
