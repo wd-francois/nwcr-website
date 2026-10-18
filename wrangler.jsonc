@@ -1,0 +1,12 @@
+// Cloudflare Workers config: serves the static Astro build in dist/ (no server code).
+// Without this file, `wrangler deploy` tries to auto-configure the project with
+// `astro add cloudflare`, which converts it to SSR and breaks the deploy.
+{
+  "name": "nwcr-website",
+  "compatibility_date": "2026-10-18",
+  "assets": {
+    "directory": "./dist",
+    // Unknown URLs get dist/404.html with a 404 status.
+    "not_found_handling": "404-page",
+  },
+}
