@@ -60,7 +60,7 @@ src/
     clients/              ← client logos
     placeholders/         ← photos to replace (see IMAGES_TODO.md)
   components/             ← reusable UI (see below); components/capability/ for the statement page
-  layouts/BaseLayout.astro← <head>, SEO, skip link, cultural notice, header, footer
+  layouts/BaseLayout.astro← <head>, SEO, skip link, header, footer
   pages/                  ← one file per route (+ [slug].astro templates, robots.txt.ts)
   styles/global.css       ← Tailwind import, brand colour tokens, shared component classes
 ```
@@ -74,7 +74,7 @@ src/
 | `BlobImage`                         | Photo inside a soft organic blob mask (4 variants, optional white ring). AVIF/WebP via `<Picture>`.                                                                     |
 | `OvalTrail`, `ConcentricCircles`    | Subtle decorative trails of hand-drawn ovals and outline rings (`aria-hidden`).                                                                                         |
 | `ArtworkBand`                       | Shows the licensed flyer artwork above the footer, or a plain gradient until it is supplied.                                                                            |
-| `CulturalNotice` / `CulturalAdvice` | Dismissible first-visit notice, and the permanent line on About and Indigenous Tribute.                                                                                 |
+| `CulturalAdvice`                    | Permanent cultural advice line on About and Indigenous Tribute.                                                                                                         |
 | `Header` / `Footer`                 | Sticky header with accessible Services dropdown and mobile slide-out menu; footer with Acknowledgement of Country.                                                      |
 | `ContactForm`                       | Provider-agnostic form with honeypot, accessible validation, success and error states.                                                                                  |
 
@@ -254,7 +254,6 @@ In a static build these are HTML redirect pages (meta refresh plus a canonical l
 - The flyer's dot-painting artwork is Aboriginal art. **Only** use the supplied, licensed file (`src/assets/brand/artwork/`). Never generate, trace or imitate Aboriginal dot art with code, SVG or AI.
 - Don't add photos or details of Melanie Tavo without the family's approval.
 - Don't invent facts, quotes or statistics. Use Australian English.
-- The cultural notice is remembered per browser under the `localStorage` key `nwcr-cultural-notice`.
 
 ## Quality checks
 

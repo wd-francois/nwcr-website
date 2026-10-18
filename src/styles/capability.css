@@ -153,7 +153,6 @@
   body > header,
   body > footer,
   body > a[href='#main-content'],
-  #cultural-notice,
   .cs-toolbar {
     display: none !important;
   }
