@@ -40,13 +40,14 @@ const featured = (await getCollection('projects', (p) => p.data.featured))
       pictureAttributes={{ class: 'absolute inset-0 -z-20 block h-full w-full' }}
       class="h-full w-full object-cover object-[50%_100%] sm:object-[50%_85%] lg:object-[50%_80%]"
     />
-    <!-- Darkens the sky behind the text so it stays readable at every crop -->
+    <!-- Darkens the sky behind the text so it stays readable at every crop. On phones the
+         text spans the full width, so the shade runs top-to-bottom instead of left-to-right. -->
     <div
       aria-hidden="true"
-      class="absolute inset-0 -z-10 bg-linear-to-r from-night/75 via-night/35 to-transparent"
+      class="absolute inset-0 -z-10 bg-linear-to-b from-night/80 via-night/45 to-transparent sm:bg-linear-to-r sm:from-night/75 sm:via-night/35"
     ></div>
 
-    <div class="container-site pt-16 pb-60 sm:pt-20 sm:pb-72 lg:pt-28 lg:pb-80">
+    <div class="container-site pt-10 pb-44 sm:pt-20 sm:pb-72 lg:pt-28 lg:pb-80">
       <div class="max-w-3xl">
         <SplitHeading
           as="h1"
@@ -55,15 +56,17 @@ const featured = (await getCollection('projects', (p) => p.data.featured))
           light="Keeping your resources"
           bold="on track"
         />
-        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
+        <p class="mt-5 max-w-2xl text-base leading-relaxed text-white/90 sm:mt-6 sm:text-lg lg:text-xl">
           Delivering rail, civil, electrical, mechanical, modular and contracting services across
           Perth, the Pilbara and remote Western Australia.
         </p>
-        <div class="mt-9 flex flex-wrap gap-4">
+        <div class="mt-8 grid gap-3 sm:mt-9 sm:flex sm:flex-wrap sm:gap-4">
           <a href="/services/" class="btn-gold">
             Explore our services <Icon name="arrow" class="size-4" />
           </a>
-          <a href="/contact/" class="btn-outline-light">Contact us</a>
+          <a href="/contact/" class="btn-outline-light">
+            Contact us
+          </a>
         </div>
       </div>
     </div>
